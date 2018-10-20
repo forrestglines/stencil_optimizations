@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "Test.hpp"
+#include "TypeName.hpp"
 
 
 //Class for tests on CPU for centered 2nd derivative
@@ -36,7 +37,7 @@ class CPUCenterDeriv : public Test{
     }
 
     enum class StepType: int{
-      kNaive,kNaiveOMP,kSIMD,
+      kNaive,kNaiveOMP,kNaiveSIMD,
     };
     const StepType step_type_;
 
@@ -46,7 +47,7 @@ class CPUCenterDeriv : public Test{
         return "kNaive";
       case StepType::kNaiveOMP:
         return "kNaiveOMP";
-      case StepType::kSIMD:
+      case StepType::kNaiveSIMD:
         return "kNaiveSIMD";
       }
       return "UNKNOWN";
@@ -129,8 +130,8 @@ class CPUCenterDeriv : public Test{
         case StepType::kNaiveOMP:
           CPUNaiveOMPCenterDeriv(dim);
           break;
-        case StepType::kSIMD:
-          CPUSIMDCenterDeriv(dim);
+        case StepType::kNaiveSIMD:
+          CPUNaiveSIMDCenterDeriv(dim);
           break;
         default:
           std::stringstream ss;
@@ -184,11 +185,11 @@ class CPUCenterDeriv : public Test{
     //OMP naive triple for-loop
     void CPUNaiveOMPCenterDeriv(int dim);
 
-    //SIMD on inner for-loop
-    void CPUSIMDCenterDeriv(int dim){}
+    //NaiveSIMD on inner for-loop
+    void CPUNaiveSIMDCenterDeriv(int dim);
 
     virtual void PrintTest(std::ostream& os){
-      os <<"<<CPUCenterDeriv>> ";
+      os <<"CPUCenterDeriv<"<< TypeName<T>() <<">";
       Test::PrintTest(os);
       os << "stencil_size_" << stencil_size_<<"\t";
       os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
