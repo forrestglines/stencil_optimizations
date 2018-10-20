@@ -21,18 +21,18 @@ class Test{
     //Flops per cell and arthimetic insentity
     //(In one dimension!)
     const unsigned int flops_per_cell_;
-    const double arith_intenstity_;
+    const double arith_intensity_;
 
     //Number of steps to run
     unsigned int nsteps_;
 
     Test(unsigned int nx, unsigned int ny, unsigned int nz, unsigned int ng, 
          unsigned int nsteps,
-         unsigned int flops_per_cell, double arith_intenstity):
+         unsigned int flops_per_cell, double arith_intensity):
           nx_(nx),ny_(ny),nz_(nz), ng_(ng),
           mx_(nx-2*ng),my_(ny-2*ng),mz_(nz-2*ng),size_(nx*ny*nz),
           nsteps_(nsteps),
-          flops_per_cell_(flops_per_cell),arith_intenstity_(arith_intenstity)
+          flops_per_cell_(flops_per_cell),arith_intensity_(arith_intensity)
         {};
 
     //Allocate Memory
@@ -76,12 +76,24 @@ class Test{
     //Write the current data to a stream
     friend std::ostream& operator<<(std::ostream& os, Test& t);
 
-  protected:
-    virtual void Print(std::ostream& os) = 0;
+    virtual void PrintU(std::ostream& os) = 0;
+    virtual void PrintTest(std::ostream& os){
+      os << "nx_="<< nx_ <<"\t";
+      os << "ny_="<< ny_ <<"\t";
+      os << "nz_="<< nz_ <<"\t";
+      os << "ng_="<< ng_ <<"\t";
+      os << "mx_="<< mx_ <<"\t";
+      os << "my_="<< my_ <<"\t";
+      os << "mz_="<< mz_ <<"\t";
+      os << "size_="<< size_ <<"\t";
+      os << "flops_per_cell_="<< flops_per_cell_ <<"\t";
+      os << "arith_intensity_="<< arith_intensity_ <<"\t";
+      os << "nsteps_="<< nsteps_ <<"\t";
+    }
 };
 
 inline std::ostream& operator<<(std::ostream& os, Test& t){
-  t.Print(os);
+  t.PrintTest(os);
   return os;
 }
 

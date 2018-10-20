@@ -125,7 +125,7 @@ void CPUNaiveCenterDeriv7p_z(T *u, T *out, int nx, int ny, int nz){
 }
 
 //Naive triple for-loop
-template<typename T>
+template<class T>
 void CPUCenterDeriv<T>::CPUNaiveCenterDeriv(int dim){
   switch (stencil_size_){
     case 3:
@@ -143,6 +143,7 @@ void CPUCenterDeriv<T>::CPUNaiveCenterDeriv(int dim){
           CPUNaiveCenterDeriv3p_x(u_,u2_,nx_,ny_,nz_);
           CPUNaiveCenterDeriv3p_y(u_,u2_,nx_,ny_,nz_);
           CPUNaiveCenterDeriv3p_z(u_,u2_,nx_,ny_,nz_);
+          break;
         default:
           std::stringstream ss;
           ss  << "dim '"<<dim<<"' unsupported!";
@@ -165,17 +166,22 @@ void CPUCenterDeriv<T>::CPUNaiveCenterDeriv(int dim){
           CPUNaiveCenterDeriv7p_x(u_,u2_,nx_,ny_,nz_);
           CPUNaiveCenterDeriv7p_y(u_,u2_,nx_,ny_,nz_);
           CPUNaiveCenterDeriv7p_z(u_,u2_,nx_,ny_,nz_);
+          break;
         default:
           std::stringstream ss;
           ss  << "dim '"<<dim<<"' unsupported!";
           throw ss.str();
           break;
       }
+      break;
     default:
       std::stringstream ss;
-      ss  << "stencil size '"<<dim<<"' unsupported!";
+      ss  << "stencil size '"<<stencil_size_<<"' unsupported!";
       throw ss.str();
       break;
   }
 
 }
+
+template void CPUCenterDeriv<float>::CPUNaiveCenterDeriv(int dim);
+template void CPUCenterDeriv<double>::CPUNaiveCenterDeriv(int dim);

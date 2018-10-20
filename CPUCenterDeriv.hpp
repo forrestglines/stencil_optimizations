@@ -23,15 +23,52 @@ class CPUCenterDeriv : public Test{
     };
     const PreStepType pre_step_type_;
 
+    std::string ToString(PreStepType type){
+      switch(type){
+      case PreStepType::kNone:
+        return "kNone";
+      case PreStepType::kBoundaries:
+        return "kBoundaries";
+      case PreStepType::kMPIBoundaries:
+        return "kMPIBoundaries";
+      }
+      return "UNKNOWN";
+    }
+
     enum class StepType: int{
       kNaive,kNaiveOMP,kSIMD,
     };
     const StepType step_type_;
 
+    std::string ToString(StepType type){
+      switch(type){
+      case StepType::kNaive:
+        return "kNaive";
+      case StepType::kNaiveOMP:
+        return "kNaiveOMP";
+      case StepType::kSIMD:
+        return "kNaiveSIMD";
+      }
+      return "UNKNOWN";
+    }
+
+
     enum class PostStepType: int{
       kNone,kBoundaries,kMPIBoundaries,
     };
     const PostStepType post_step_type_;
+
+    std::string ToString(PostStepType type){
+      switch(type){
+      case PostStepType::kNone:
+        return "kNone";
+      case PostStepType::kBoundaries:
+        return "kBoundaries";
+      case PostStepType::kMPIBoundaries:
+        return "kMPIBoundaries";
+      }
+      return "UNKNOWN";
+    }
 
     //The data to differentiate
     T *u_,*u2_;
@@ -75,8 +112,8 @@ class CPUCenterDeriv : public Test{
           break; 
         default:
           std::stringstream ss;
-          ss  << "PostStepType '"
-              << static_cast<typename std::underlying_type<T>::type>(post_step_type_)
+          ss  << "PreStepType '"
+              << ToString(pre_step_type_)
               << "' unsupported!";
           throw ss.str();
           break;
@@ -98,7 +135,7 @@ class CPUCenterDeriv : public Test{
         default:
           std::stringstream ss;
           ss  << "PostStepType '"
-              << static_cast<typename std::underlying_type<T>::type>(post_step_type_)
+              << ToString(step_type_)
               << "' unsupported!";
           throw ss.str();
           break;
@@ -113,7 +150,7 @@ class CPUCenterDeriv : public Test{
         default:
           std::stringstream ss;
           ss  << "PostStepType '"
-              << static_cast<typename std::underlying_type<T>::type>(post_step_type_)
+              << ToString(post_step_type_)
               << "' unsupported!";
           throw ss.str();
           break;
@@ -127,8 +164,8 @@ class CPUCenterDeriv : public Test{
 
     //Get the seconds between the last start and end
     virtual double ElapsedTime(){
-      return std::chrono::duration_cast<std::chrono::seconds>( 
-          endTime - startTime ).count();
+      return std::chrono::duration_cast<std::chrono::nanoseconds>( 
+          endTime - startTime ).count()/1e9;
     }
 
     //Release memory
@@ -150,8 +187,16 @@ class CPUCenterDeriv : public Test{
     //SIMD on inner for-loop
     void CPUSIMDCenterDeriv(int dim){}
 
-  protected:
-    virtual void Print(std::ostream& os){
+    virtual void PrintTest(std::ostream& os){
+      os <<"<<CPUCenterDeriv>> ";
+      Test::PrintTest(os);
+      os << "stencil_size_" << stencil_size_<<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
+      os << "step_type_=" << ToString(step_type_)<<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+    }
+
+    virtual void PrintU(std::ostream& os){
       os<<"#"<< nx_ << " "<< ny_ << " " << nz_ << " "<<std::endl;
 
       os<<std::scientific;
