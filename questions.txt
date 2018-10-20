@@ -1,9 +1,47 @@
-4 types of functions to test:
 
-Low  arthmetic intensity, no stencil
-High arthmetic intensity, no stencil
-Low  arthmetic intensity, with stencil
-High arthmetic intensity, with stencil
+The goal of my project is to determine the best/easiest way to obtain maximum
+performance for stenciled functions simultaneously for CPUs and GPUs using
+Kokkos. Explicit methods such as finited difference and finite volume for
+MHD/hydrodynamics on structured meshes can typically be decomposed into a
+series of stenciled functions applied to the mesh. Rather than write an entire
+MHD code using several different approaches, I want to focus on a simple
+function, such as a centered finite derivative. Depending on time constraints,
+I will implement this hypothetical dieal approach in the hydro code Kathena and
+compare to a naive Kokkos implementation and a CPU optimized Athena version.
+
+========================================
+Basic types of functions I want to test:
+
+Stenciless operations
+
+Centered 1D stencil operations, in X, Y, and Z.
+
+Small and Large Stencils
+
+High and Low arthmetic intensities
+
+High and Low register use (simple and complex functions)
+
+========================================
+The main questions I want answered are:
+
+What is the fastest CPU implementation?
+
+What is the fastest Kokkos implementation for CPUs?
+
+What is the fastest Kokkos implementation for GPUs?
+
+What is the fastest Kokkos implementation for both CPUs and GPUs?
+
+What is the fastest CUDA implementation for GPUs?
+
+What is the easiest+fast Kokkos implementation for both CPUs and GPUs?
+
+How do all of these implementations compare?
+
+========================================
+Specific approaches I want to try/Questions/Random Notes
+
 Varying problem size
 Varying register use?
 
@@ -41,19 +79,3 @@ Can OpenACC give the same performance as Kokkos? As CUDA?
 
 Do these same considerations apply for the FPGAs?
 
-
-
-========================================
-What is the fastest CPU implementation?
-
-What is the fastest Kokkos implementation for CPUs?
-
-What is the fastest Kokkos implementation for GPUs?
-
-What is the fastest Kokkos implementation for both CPUs and GPUs?
-
-What is the fastest CUDA implementation for GPUs?
-
-What is the easiest+fast Kokkos implementation for both CPUs and GPUs?
-
-How do all of these compare?
