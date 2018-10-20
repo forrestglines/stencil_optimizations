@@ -182,7 +182,7 @@ class CPUCenterDeriv : public Test{
     void CPUNaiveCenterDeriv(int dim);
 
     //OMP naive triple for-loop
-    void CPUNaiveOMPCenterDeriv(int dim){}
+    void CPUNaiveOMPCenterDeriv(int dim);
 
     //SIMD on inner for-loop
     void CPUSIMDCenterDeriv(int dim){}
