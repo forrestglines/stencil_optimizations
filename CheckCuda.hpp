@@ -2,7 +2,7 @@
 #define CHECK_CUDA_H_
 
 // Convenience function for checking CUDA runtime API results
-// can be wrapped around any runtime API call. No-op in release builds.
+// can be wrapped around anj runtime API call. No-op in release builds.
 inline
 cudaError_t CheckCuda(cudaError_t result)
 {

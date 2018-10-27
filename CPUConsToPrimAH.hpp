@@ -5,9 +5,11 @@
 #include <ostream>
 #include <string>
 #include <sstream>
+#include <cmath>
 
 #include "Test.hpp"
 #include "TypeName.hpp"
+#include "Matrix.hpp"
 
 
 #define NHYDRO 5
@@ -25,19 +27,24 @@
 #define IVZ 3
 #define IPR 4
 
+
 //Class for tests on CPU for centered 2nd derivative
 template <class T>
 class CPUConsToPrimAH : public Test{
 
   public:
     //Size of the grid
-    const unsigned int nx_,ny_,nz_,size_;
+    const unsigned int ni_,nj_,nk_,size_;
 
-    //Starting and ending indicies [start,end)
+    //Starting and ending indicies [start,end]
     const unsigned int is_,ie_,js_,je_,ks_,ke_;
 
     //Number of fluid variables
     const unsigned nvars_ = NHYDRO;
+
+    const double density_floor_ = 0.01;
+    const double pressure_floor_ = 0.01;
+    const double gm1_ = 1.666666667;
 
     //PostStep,Step,PreStep Types
     enum class PreStepType: int{
@@ -49,7 +56,6 @@ class CPUConsToPrimAH : public Test{
       switch(type){
       case PreStepType::kNone:
         return "kNone";
-      case PreStepType::kBoundaries:
       }
       return "UNKNOWN";
     }
@@ -85,13 +91,13 @@ class CPUConsToPrimAH : public Test{
       return "UNKNOWN";
     }
 
-    //The data to differentiate
-    T *u_,*u2_;
+    //The Conserved and Primitive data
+    Matrix<T> cons_,prim_;
     
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime,endTime;
 
-    CPUConsToPrimAH(unsigned int nx, unsigned int ny, unsigned int nz, 
+    CPUConsToPrimAH(unsigned int ni, unsigned int nj, unsigned int nk, 
                     unsigned int is, unsigned int ie,
                     unsigned int js, unsigned int je,
                     unsigned int ks, unsigned int ke,
@@ -99,28 +105,46 @@ class CPUConsToPrimAH : public Test{
                    PreStepType pre_step_type, 
                    StepType step_type, 
                    PostStepType post_step_type):
-        Test( (ie -is)*(je-js)*(ke-ks),
+        Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
               nsteps, 1,
               0, //flops_per_cell
               0),//arith_intensity
-            nx_(nx),ny_(ny),nz_(nz), size_(nx*ny*nz),
+            ni_(ni),nj_(nj),nk_(nk), size_(ni*nj*nk),
             is_(is),ie_(ie),
             js_(js),je_(je),
             ks_(ks),ke_(ke),
-            pre_step_type_(pre_step_type),step_type_(step_type),post_step_type_(post_step_type)
+            pre_step_type_(pre_step_type),
+            step_type_(step_type),post_step_type_(post_step_type),
+            cons_(nvars_,nk_,nj_,ni_),prim_(nvars_,nk_,nj_,ni_)
         {}
 
 
 
     //Allocate Memory
     virtual int Malloc(){
-      cons_  = new T[size_*nvars_];
-      prim_ = new T[size_*nvars_];
+      cons_.Malloc();
+      prim_.Malloc();
 
       //Set conserved data to something reasonable
-      for(knt k = 0; k < nz_; k++){
-        for(jnt j = 0; j < ny_; j++){
-          for(int i = 0; i < nx_; i++){
+      for(int k = 0; k < nk_; k++){
+        for(int j = 0; j < nj_; j++){
+          for(int i = 0; i < ni_; i++){
+            T c = (i + ni_*(j + nj_*k) + 1.0)/size_;
+            cons_(IDN,k,j,i) = c;
+            cons_(IM1,k,j,i) = sin(c);
+            cons_(IM2,k,j,i) = cos(c);
+            cons_(IM3,k,j,i) = tan(c);
+            cons_(IEN,k,j,i) = c*c+4.0;
+          }
+        }
+      }
+      //Set primitive data to garbage
+      for(int l = 0; l < nvars_; l++){
+        for(int k = 0; k < nk_; k++){
+          for(int j = 0; j < nj_; j++){
+            for(int i = 0; i < ni_; i++){
+              prim_(l,k,j,i) = (l+1)*-111;
+            }
           }
         }
       }
@@ -153,13 +177,13 @@ class CPUConsToPrimAH : public Test{
     virtual void Step(int dim){
       switch(step_type_){
         case StepType::kNaive:
-          CPUNaiveCenterDeriv(dim);
+          CPUNaiveConsToPrimAH(dim);
           break;
         case StepType::kNaiveOMP:
-          CPUNaiveOMPCenterDeriv(dim);
+          CPUNaiveOMPConsToPrimAH(dim);
           break;
         case StepType::kNaiveSIMD:
-          CPUNaiveSIMDCenterDeriv(dim);
+          CPUNaiveSIMDConsToPrimAH(dim);
           break;
         default:
           std::stringstream ss;
@@ -199,8 +223,8 @@ class CPUConsToPrimAH : public Test{
 
     //Release memory
     virtual int Free(){
-      delete[] cons_;
-      delete[] prim_;
+      cons_.Free();
+      prim_.Free();
 
       return 0;
     }
@@ -214,14 +238,14 @@ class CPUConsToPrimAH : public Test{
     void CPUNaiveOMPConsToPrimAH(int dim);
 
     //NaiveSIMD on inner for-loop
-    void CPUNaiveSIMDCenterDeriv(int dim);
+    void CPUNaiveSIMDConsToPrimAH(int dim);
 
     virtual void PrintTest(std::ostream& os){
       os <<"CPUConsToPrimAH<"<< TypeName<T>() <<">";
       Test::PrintTest(os);
-      os << "nx_=" << nx_ <<"\t";
-      os << "ny_=" << ny_ <<"\t";
-      os << "nz_=" << nz_ <<"\t";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
       os << "size_=" << size_ <<"\t";
       os << "is_=" << is_ <<"\t";
       os << "ie_=" << ie_ <<"\t";
@@ -229,37 +253,45 @@ class CPUConsToPrimAH : public Test{
       os << "je_=" << je_ <<"\t";
       os << "ks_=" << ks_ <<"\t";
       os << "ke_=" << ke_ <<"\t";
+      os << "nvars_=" << nvars_ <<"\t";
       os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
       os << "step_type_=" << ToString(step_type_)<<"\t";
       os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
     }
 
     virtual void PrintU(std::ostream& os){
-      os<<"#"<< nx_ << " "<< ny_ << " " << nz_ << " "<<std::endl;
+      os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " " << nvars_<<std::endl;
 
       os<<std::scientific;
       std::cout.precision(15);
 
-      for(int k = 0; k < nz_; k++){
-        for(int j = 0; j < ny_; j++){
-          for(int i = 0; i < nx_; i++){
-            os<< cons_[i + nx_*(j + ny_*k)];
+      for(int l = 0; l < nvars_; l++){
+        for(int k = 0; k < nk_; k++){
+          for(int j = 0; j < nj_; j++){
+            for(int i = 0; i < ni_; i++){
+              os<< cons_(l,k,j,i);
+            }
+            os<<std::endl;
           }
-          os<<std::endl;
+          os<<std::endl;//Double space for z breaks
         }
-        os<<std::endl;//Double space for z breaks
+        os<<std::endl;//Triple space for var breaks
       }
-      os<<std::endl;//Triple space
+      os<<std::endl;//Quad space
 
-      for(int k = 0; k < nz_; k++){
-        for(int j = 0; j < ny_; j++){
-          for(int i = 0; i < nx_; i++){
-            os<< prim_[i + nx_*(j + ny_*k)];
+      for(int l = 0; l < nvars_; l++){
+        for(int k = 0; k < nk_; k++){
+          for(int j = 0; j < nj_; j++){
+            for(int i = 0; i < ni_; i++){
+              os<< prim_(l,k,j,i);
+            }
+            os<<std::endl;
           }
-          os<<std::endl;
+          os<<std::endl;//Double space for z breaks
         }
-        os<<std::endl;//Double space for z breaks
+        os<<std::endl;//Triple space for var breaks
       }
+      os<<std::endl;//Quad space
     }
 
 

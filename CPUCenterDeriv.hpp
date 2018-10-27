@@ -16,7 +16,7 @@ class CPUCenterDeriv : public Test{
 
   public:
     //Size of the grid
-    const unsigned int nx_,ny_,nz_,size_;
+    const unsigned int ni_,nj_,nk_,size_;
 
     //Size of stencil
     const unsigned int stencil_size_;
@@ -83,18 +83,18 @@ class CPUCenterDeriv : public Test{
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime,endTime;
 
-    CPUCenterDeriv(unsigned int nx, unsigned int ny, unsigned int nz, 
+    CPUCenterDeriv(unsigned int ni, unsigned int nj, unsigned int nk, 
                    unsigned int stencil_size, unsigned int nsteps,
                    PreStepType pre_step_type, 
                    StepType step_type, 
                    PostStepType post_step_type):
-        Test(  (nx - (stencil_size-1)/2)*
-               (ny - (stencil_size-1)/2)*
-               (nz - (stencil_size-1)/2),
+        Test(  (ni - (stencil_size-1)/2)*
+               (nj - (stencil_size-1)/2)*
+               (nk - (stencil_size-1)/2),
               nsteps, 4,
               stencil_size*2-1, //flops_per_cell
               (stencil_size*2-1)/(sizeof(T)*stencil_size)),//arith_intensity
-            nx_(nx),ny_(ny),nz_(nz), size_(nx*ny*nz),
+            ni_(ni),nj_(nj),nk_(nk), size_(ni*nj*nk),
             stencil_size_(stencil_size), ng_((stencil_size-1)/2),
             pre_step_type_(pre_step_type),step_type_(step_type),post_step_type_(post_step_type)
         {}
@@ -200,9 +200,9 @@ class CPUCenterDeriv : public Test{
     virtual void PrintTest(std::ostream& os){
       os <<"CPUCenterDeriv<"<< TypeName<T>() <<">";
       Test::PrintTest(os);
-      os << "nx_=" << nx_ <<"\t";
-      os << "ny_=" << ny_ <<"\t";
-      os << "nz_=" << nz_ <<"\t";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
       os << "size_=" << size_ <<"\t";
       os << "ng_=" << ng_ <<"\t";
       os << "stencil_size_" << stencil_size_<<"\t";
@@ -212,15 +212,15 @@ class CPUCenterDeriv : public Test{
     }
 
     virtual void PrintU(std::ostream& os){
-      os<<"#"<< nx_ << " "<< ny_ << " " << nz_ << " "<<std::endl;
+      os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " "<<std::endl;
 
       os<<std::scientific;
       std::cout.precision(15);
 
-      for(int k = 0; k < nz_; k++){
-        for(int j = 0; j < ny_; j++){
-          for(int i = 0; i < nx_; i++){
-            os<< u_[i + nx_*(j + ny_*k)];
+      for(int k = 0; k < nk_; k++){
+        for(int j = 0; j < nj_; j++){
+          for(int i = 0; i < ni_; i++){
+            os<< u_[i + ni_*(j + nj_*k)];
           }
           os<<std::endl;
         }
@@ -228,10 +228,10 @@ class CPUCenterDeriv : public Test{
       }
       os<<std::endl;//Triple space
 
-      for(int k = 0; k < nz_; k++){
-        for(int j = 0; j < ny_; j++){
-          for(int i = 0; i < nx_; i++){
-            os<< u2_[i + nx_*(j + ny_*k)];
+      for(int k = 0; k < nk_; k++){
+        for(int j = 0; j < nj_; j++){
+          for(int i = 0; i < ni_; i++){
+            os<< u2_[i + ni_*(j + nj_*k)];
           }
           os<<std::endl;
         }

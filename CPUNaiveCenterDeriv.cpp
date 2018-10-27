@@ -5,120 +5,120 @@
 
 
 template<typename T>
-void CPUNaiveCenterDeriv3p_x(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv3p_x(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 1;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] =    u[ (i-1) + nx * (j + nz*k) ]
-                                    -2*u[ i + nx * (j + nz*k) ]
-                                      *u[ (i+1) + nx * (j + nz*k) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] =    u[ (i-1) + ni * (j + nk*k) ]
+                                    -2*u[ i + ni * (j + nk*k) ]
+                                      *u[ (i+1) + ni * (j + nk*k) ];
       }
     }
   }
 }
 
 template<typename T>
-void CPUNaiveCenterDeriv3p_y(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv3p_y(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 1;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] =    u[ i + nx * ( (j-1) + nz*k) ]
-                                    -2*u[ i + nx * (j + nz*k) ]
-                                      *u[ i + nx * ( (j+1) + nz*k) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] =    u[ i + ni * ( (j-1) + nk*k) ]
+                                    -2*u[ i + ni * (j + nk*k) ]
+                                      *u[ i + ni * ( (j+1) + nk*k) ];
       }
     }
   }
 }
 
 template<typename T>
-void CPUNaiveCenterDeriv3p_z(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv3p_z(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 1;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] =    u[ i + nx * (j + nz*(k-1)) ]
-                                    -2*u[ i + nx * (j + nz*k) ]
-                                      *u[ i + nx * (j + nz*(k+1)) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] =    u[ i + ni * (j + nk*(k-1)) ]
+                                    -2*u[ i + ni * (j + nk*k) ]
+                                      *u[ i + ni * (j + nk*(k+1)) ];
       }
     }
   }
 }
 
 template<typename T>
-void CPUNaiveCenterDeriv7p_x(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv7p_x(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 3;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] = -1./560.*u[ (i-4) + nx * (j + nz*k) ]
-                                    +8./315.*u[ (i-3) + nx * (j + nz*k) ]
-                                    -1./5.  *u[ (i-2) + nx * (j + nz*k) ]
-                                    +8./5.  *u[ (i-1) + nx * (j + nz*k) ]
-                                     -205./27.*u[ i + nx * (j + nz*k) ]
-                                    +8./5.  *u[ (i+1) + nx * (j + nz*k) ]
-                                    -1./5.  *u[ (i+2) + nx * (j + nz*k) ]
-                                    +8./315.*u[ (i+3) + nx * (j + nz*k) ]
-                                    -1./560.*u[ (i+4) + nx * (j + nz*k) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] = -1./560.*u[ (i-4) + ni * (j + nk*k) ]
+                                    +8./315.*u[ (i-3) + ni * (j + nk*k) ]
+                                    -1./5.  *u[ (i-2) + ni * (j + nk*k) ]
+                                    +8./5.  *u[ (i-1) + ni * (j + nk*k) ]
+                                     -205./27.*u[ i + ni * (j + nk*k) ]
+                                    +8./5.  *u[ (i+1) + ni * (j + nk*k) ]
+                                    -1./5.  *u[ (i+2) + ni * (j + nk*k) ]
+                                    +8./315.*u[ (i+3) + ni * (j + nk*k) ]
+                                    -1./560.*u[ (i+4) + ni * (j + nk*k) ];
       }
     }
   }
 }
 
 template<typename T>
-void CPUNaiveCenterDeriv7p_y(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv7p_y(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 3;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] = -1./560.*u[ i + nx * ( (j-4) + nz*k) ]
-                                    +8./315.*u[ i + nx * ( (j-3) + nz*k) ]
-                                    -1./5.  *u[ i + nx * ( (j-2) + nz*k) ]
-                                    +8./5.  *u[ i + nx * ( (j-1) + nz*k) ]
-                                     -205./27.*u[ i + nx * (j + nz*k) ]
-                                    +8./5.  *u[ i + nx * ( (j+1) + nz*k) ]
-                                    -1./5.  *u[ i + nx * ( (j+2) + nz*k) ]
-                                    +8./315.*u[ i + nx * ( (j+3) + nz*k) ]
-                                    -1./560.*u[ i + nx * ( (j+4) + nz*k) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] = -1./560.*u[ i + ni * ( (j-4) + nk*k) ]
+                                    +8./315.*u[ i + ni * ( (j-3) + nk*k) ]
+                                    -1./5.  *u[ i + ni * ( (j-2) + nk*k) ]
+                                    +8./5.  *u[ i + ni * ( (j-1) + nk*k) ]
+                                     -205./27.*u[ i + ni * (j + nk*k) ]
+                                    +8./5.  *u[ i + ni * ( (j+1) + nk*k) ]
+                                    -1./5.  *u[ i + ni * ( (j+2) + nk*k) ]
+                                    +8./315.*u[ i + ni * ( (j+3) + nk*k) ]
+                                    -1./560.*u[ i + ni * ( (j+4) + nk*k) ];
       }
     }
   }
 }
 
 template<typename T>
-void CPUNaiveCenterDeriv7p_z(T *u, T *out, int nx, int ny, int nz){
+void CPUNaiveCenterDeriv7p_z(T *u, T *out, int ni, int nj, int nk){
 
   const int NG = 3;
   int i,j,k;
 
-  for(k = NG; k < nz-NG; k++){
-    for(j = NG; j < ny-NG; j++){
-      for(i = NG; i < nx-NG; i++){
-        out[i + nx * (j + nz*k) ] = -1./560.*u[ i + nx * (j + nz*(k-4)) ]
-                                    +8./315.*u[ i + nx * (j + nz*(k-3)) ]
-                                    -1./5.  *u[ i + nx * (j + nz*(k-2)) ]
-                                    +8./5.  *u[ i + nx * (j + nz*(k-1)) ]
-                                     -205./27.*u[ i + nx * (j + nz*k) ]
-                                    +8./5.  *u[ i + nx * (j + nz*(k+1)) ]
-                                    -1./5.  *u[ i + nx * (j + nz*(k+2)) ]
-                                    +8./315.*u[ i + nx * (j + nz*(k+3)) ]
-                                    -1./560.*u[ i + nx * (j + nz*(k+4)) ];
+  for(k = NG; k < nk-NG; k++){
+    for(j = NG; j < nj-NG; j++){
+      for(i = NG; i < ni-NG; i++){
+        out[i + ni * (j + nk*k) ] = -1./560.*u[ i + ni * (j + nk*(k-4)) ]
+                                    +8./315.*u[ i + ni * (j + nk*(k-3)) ]
+                                    -1./5.  *u[ i + ni * (j + nk*(k-2)) ]
+                                    +8./5.  *u[ i + ni * (j + nk*(k-1)) ]
+                                     -205./27.*u[ i + ni * (j + nk*k) ]
+                                    +8./5.  *u[ i + ni * (j + nk*(k+1)) ]
+                                    -1./5.  *u[ i + ni * (j + nk*(k+2)) ]
+                                    +8./315.*u[ i + ni * (j + nk*(k+3)) ]
+                                    -1./560.*u[ i + ni * (j + nk*(k+4)) ];
       }
     }
   }
@@ -131,18 +131,18 @@ void CPUCenterDeriv<T>::CPUNaiveCenterDeriv(int dim){
     case 3:
       switch(dim){
         case 0:
-          CPUNaiveCenterDeriv3p_x(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv3p_x(u_,u2_,ni_,nj_,nk_);
           break;
         case 1:
-          CPUNaiveCenterDeriv3p_y(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv3p_y(u_,u2_,ni_,nj_,nk_);
           break;
         case 2:
-          CPUNaiveCenterDeriv3p_y(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv3p_y(u_,u2_,ni_,nj_,nk_);
           break;
         case 3:
-          CPUNaiveCenterDeriv3p_x(u_,u2_,nx_,ny_,nz_);
-          CPUNaiveCenterDeriv3p_y(u_,u2_,nx_,ny_,nz_);
-          CPUNaiveCenterDeriv3p_z(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv3p_x(u_,u2_,ni_,nj_,nk_);
+          CPUNaiveCenterDeriv3p_y(u_,u2_,ni_,nj_,nk_);
+          CPUNaiveCenterDeriv3p_z(u_,u2_,ni_,nj_,nk_);
           break;
         default:
           std::stringstream ss;
@@ -154,18 +154,18 @@ void CPUCenterDeriv<T>::CPUNaiveCenterDeriv(int dim){
     case 7:
       switch(dim){
         case 0:
-          CPUNaiveCenterDeriv7p_x(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv7p_x(u_,u2_,ni_,nj_,nk_);
           break;
         case 1:
-          CPUNaiveCenterDeriv7p_y(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv7p_y(u_,u2_,ni_,nj_,nk_);
           break;
         case 2:
-          CPUNaiveCenterDeriv7p_y(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv7p_y(u_,u2_,ni_,nj_,nk_);
           break;
         case 3:
-          CPUNaiveCenterDeriv7p_x(u_,u2_,nx_,ny_,nz_);
-          CPUNaiveCenterDeriv7p_y(u_,u2_,nx_,ny_,nz_);
-          CPUNaiveCenterDeriv7p_z(u_,u2_,nx_,ny_,nz_);
+          CPUNaiveCenterDeriv7p_x(u_,u2_,ni_,nj_,nk_);
+          CPUNaiveCenterDeriv7p_y(u_,u2_,ni_,nj_,nk_);
+          CPUNaiveCenterDeriv7p_z(u_,u2_,ni_,nj_,nk_);
           break;
         default:
           std::stringstream ss;
