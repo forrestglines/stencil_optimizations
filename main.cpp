@@ -43,20 +43,8 @@ int main(int argc, char** argv){
         ) );
 
   for( auto const& test: tests){
-    try{
-      cout <<*test<<endl;
-      test->Malloc();
-
-      for( int dim = 0; dim < 4; dim++){
-        double time = test->RunTest(dim);
-        cout <<time<<endl;
-      }
-      test->Free();
-      delete test;
-    }
-    catch( string e){
-      cout<<"Caught Exception: "<< e<<endl;
-    }
+    test->TestAllDims(cout);
+    delete test;
   }
 
 

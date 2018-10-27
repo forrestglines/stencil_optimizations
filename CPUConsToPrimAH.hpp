@@ -1,5 +1,5 @@
-#ifndef CPU_CENTER_DERIV_H_
-#define CPU_CENTER_DERIV_H_
+#ifndef CPU_CONS_TO_PRIM_AH_H_
+#define CPU_CONS_TO_PRIM_AH_H_
 
 #include <chrono>
 #include <ostream>
@@ -10,23 +10,38 @@
 #include "TypeName.hpp"
 
 
+#define NHYDRO 5
+
+//Indices for conserved variables
+#define IDN 0
+#define IM1 1
+#define IM2 2
+#define IM3 3
+#define IEN 3
+
+//Indices for primitive variables
+#define IVX 1
+#define IVY 2
+#define IVZ 3
+#define IPR 4
+
 //Class for tests on CPU for centered 2nd derivative
 template <class T>
-class CPUCenterDeriv : public Test{
+class CPUConsToPrimAH : public Test{
 
   public:
     //Size of the grid
     const unsigned int nx_,ny_,nz_,size_;
 
-    //Size of stencil
-    const unsigned int stencil_size_;
+    //Starting and ending indicies [start,end)
+    const unsigned int is_,ie_,js_,je_,ks_,ke_;
 
-    //Number of Ghost zones
-    const unsigned int ng_;
+    //Number of fluid variables
+    const unsigned nvars_ = NHYDRO;
 
     //PostStep,Step,PreStep Types
     enum class PreStepType: int{
-      kNone,kBoundaries,kMPIBoundaries,
+      kNone,
     };
     const PreStepType pre_step_type_;
 
@@ -35,9 +50,6 @@ class CPUCenterDeriv : public Test{
       case PreStepType::kNone:
         return "kNone";
       case PreStepType::kBoundaries:
-        return "kBoundaries";
-      case PreStepType::kMPIBoundaries:
-        return "kMPIBoundaries";
       }
       return "UNKNOWN";
     }
@@ -61,7 +73,7 @@ class CPUCenterDeriv : public Test{
 
 
     enum class PostStepType: int{
-      kNone,kBoundaries,kMPIBoundaries,
+      kNone,
     };
     const PostStepType post_step_type_;
 
@@ -69,10 +81,6 @@ class CPUCenterDeriv : public Test{
       switch(type){
       case PostStepType::kNone:
         return "kNone";
-      case PostStepType::kBoundaries:
-        return "kBoundaries";
-      case PostStepType::kMPIBoundaries:
-        return "kMPIBoundaries";
       }
       return "UNKNOWN";
     }
@@ -83,19 +91,22 @@ class CPUCenterDeriv : public Test{
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime,endTime;
 
-    CPUCenterDeriv(unsigned int nx, unsigned int ny, unsigned int nz, 
-                   unsigned int stencil_size, unsigned int nsteps,
+    CPUConsToPrimAH(unsigned int nx, unsigned int ny, unsigned int nz, 
+                    unsigned int is, unsigned int ie,
+                    unsigned int js, unsigned int je,
+                    unsigned int ks, unsigned int ke,
+                   unsigned int nsteps,
                    PreStepType pre_step_type, 
                    StepType step_type, 
                    PostStepType post_step_type):
-        Test(  (nx - (stencil_size-1)/2)*
-               (ny - (stencil_size-1)/2)*
-               (nz - (stencil_size-1)/2),
-              nsteps, 4,
-              stencil_size*2-1, //flops_per_cell
-              (stencil_size*2-1)/(sizeof(T)*stencil_size)),//arith_intensity
+        Test( (ie -is)*(je-js)*(ke-ks),
+              nsteps, 1,
+              0, //flops_per_cell
+              0),//arith_intensity
             nx_(nx),ny_(ny),nz_(nz), size_(nx*ny*nz),
-            stencil_size_(stencil_size), ng_((stencil_size-1)/2),
+            is_(is),ie_(ie),
+            js_(js),je_(je),
+            ks_(ks),ke_(ke),
             pre_step_type_(pre_step_type),step_type_(step_type),post_step_type_(post_step_type)
         {}
 
@@ -103,8 +114,16 @@ class CPUCenterDeriv : public Test{
 
     //Allocate Memory
     virtual int Malloc(){
-      u_  = new T[size_];
-      u2_ = new T[size_];
+      cons_  = new T[size_*nvars_];
+      prim_ = new T[size_*nvars_];
+
+      //Set conserved data to something reasonable
+      for(knt k = 0; k < nz_; k++){
+        for(jnt j = 0; j < ny_; j++){
+          for(int i = 0; i < nx_; i++){
+          }
+        }
+      }
 
       return 0;
     }
@@ -180,8 +199,8 @@ class CPUCenterDeriv : public Test{
 
     //Release memory
     virtual int Free(){
-      delete[] u_;
-      delete[] u2_;
+      delete[] cons_;
+      delete[] prim_;
 
       return 0;
     }
@@ -189,23 +208,27 @@ class CPUCenterDeriv : public Test{
     //Different Kernel implementations
     
     //Naive triple for-loop
-    void CPUNaiveCenterDeriv(int dim);
+    void CPUNaiveConsToPrimAH(int dim);
 
     //OMP naive triple for-loop
-    void CPUNaiveOMPCenterDeriv(int dim);
+    void CPUNaiveOMPConsToPrimAH(int dim);
 
     //NaiveSIMD on inner for-loop
     void CPUNaiveSIMDCenterDeriv(int dim);
 
     virtual void PrintTest(std::ostream& os){
-      os <<"CPUCenterDeriv<"<< TypeName<T>() <<">";
+      os <<"CPUConsToPrimAH<"<< TypeName<T>() <<">";
       Test::PrintTest(os);
       os << "nx_=" << nx_ <<"\t";
       os << "ny_=" << ny_ <<"\t";
       os << "nz_=" << nz_ <<"\t";
       os << "size_=" << size_ <<"\t";
-      os << "ng_=" << ng_ <<"\t";
-      os << "stencil_size_" << stencil_size_<<"\t";
+      os << "is_=" << is_ <<"\t";
+      os << "ie_=" << ie_ <<"\t";
+      os << "js_=" << js_ <<"\t";
+      os << "je_=" << je_ <<"\t";
+      os << "ks_=" << ks_ <<"\t";
+      os << "ke_=" << ke_ <<"\t";
       os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
       os << "step_type_=" << ToString(step_type_)<<"\t";
       os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
@@ -220,7 +243,7 @@ class CPUCenterDeriv : public Test{
       for(int k = 0; k < nz_; k++){
         for(int j = 0; j < ny_; j++){
           for(int i = 0; i < nx_; i++){
-            os<< u_[i + nx_*(j + ny_*k)];
+            os<< cons_[i + nx_*(j + ny_*k)];
           }
           os<<std::endl;
         }
@@ -231,7 +254,7 @@ class CPUCenterDeriv : public Test{
       for(int k = 0; k < nz_; k++){
         for(int j = 0; j < ny_; j++){
           for(int i = 0; i < nx_; i++){
-            os<< u2_[i + nx_*(j + ny_*k)];
+            os<< prim_[i + nx_*(j + ny_*k)];
           }
           os<<std::endl;
         }
@@ -242,4 +265,4 @@ class CPUCenterDeriv : public Test{
 
 };
 
-#endif //CPU_CENTER_DERIV_H_
+#endif //CPU_CONS_TO_PRIM_AH_H_

@@ -6,17 +6,9 @@
 class Test{
 
   public:
-    //Full size of the grid
-    const unsigned int nx_,ny_,nz_;
 
-    //Ghost points
-    const unsigned int ng_;
-
-    //Interior size of the grid
-    const unsigned int mx_,my_,mz_;
-
-    //Total size of the grid
-    const unsigned int size_;
+    //Total number of cells computed
+    const unsigned int ncells_;
 
     //Flops per cell and arthimetic insentity
     //(In one dimension!)
@@ -26,12 +18,14 @@ class Test{
     //Number of steps to run
     unsigned int nsteps_;
 
-    Test(unsigned int nx, unsigned int ny, unsigned int nz, unsigned int ng, 
-         unsigned int nsteps,
+    //Number of dims to try
+    unsigned int ndims_;
+
+    Test(unsigned int ncells_,
+         unsigned int nsteps, unsigned int ndims,
          unsigned int flops_per_cell, double arith_intensity):
-          nx_(nx),ny_(ny),nz_(nz), ng_(ng),
-          mx_(nx-2*ng),my_(ny-2*ng),mz_(nz-2*ng),size_(nx*ny*nz),
-          nsteps_(nsteps),
+          ncells_(ncells_),
+          nsteps_(nsteps), ndims_(ndims),
           flops_per_cell_(flops_per_cell),arith_intensity_(arith_intensity)
         {};
 
@@ -70,6 +64,22 @@ class Test{
       return ElapsedTime();
     }
 
+    virtual void TestAllDims(std::ostream& os){
+      try{
+        os << *this << std::endl;
+        Malloc();
+
+        for( int dim = 0; dim < ndims_; dim++){
+          double time = RunTest(dim);
+          os << time << std::endl;
+        }
+        Free();
+      }
+      catch( std::string e){
+        os << "Caught Exception: \"" << e << "\"" << std::endl;
+      }
+    }
+
     //Free Memory
     virtual int Free() = 0;
 
@@ -78,17 +88,11 @@ class Test{
 
     virtual void PrintU(std::ostream& os) = 0;
     virtual void PrintTest(std::ostream& os){
-      os << "nx_="<< nx_ <<"\t";
-      os << "ny_="<< ny_ <<"\t";
-      os << "nz_="<< nz_ <<"\t";
-      os << "ng_="<< ng_ <<"\t";
-      os << "mx_="<< mx_ <<"\t";
-      os << "my_="<< my_ <<"\t";
-      os << "mz_="<< mz_ <<"\t";
-      os << "size_="<< size_ <<"\t";
-      os << "flops_per_cell_="<< flops_per_cell_ <<"\t";
-      os << "arith_intensity_="<< arith_intensity_ <<"\t";
-      os << "nsteps_="<< nsteps_ <<"\t";
+      os << "ncells_=" << ncells_ <<"\t";
+      os << "flops_per_cell_=" << flops_per_cell_ <<"\t";
+      os << "arith_intensity_=" << arith_intensity_ <<"\t";
+      os << "nsteps_=" << nsteps_ <<"\t";
+      os << "ndims_=" << ndims_ <<"\t";
     }
 };
 
