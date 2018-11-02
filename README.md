@@ -9,7 +9,7 @@ function, such as a centered finite derivative. Depending on time constraints,
 I will implement this hypothetical dieal approach in the hydro code Kathena and
 compare to a naive Kokkos implementation and a CPU optimized Athena version.
 
-========================================
+----------------------------------------
 Basic types of functions I want to test:
 
 Stenciless operations
@@ -22,7 +22,7 @@ High and Low arthmetic intensities
 
 High and Low register use (simple and complex functions)
 
-========================================
+----------------------------------------
 The main questions I want answered are:
 
 What is the fastest CPU implementation?
@@ -39,7 +39,7 @@ What is the easiest+fast Kokkos implementation for both CPUs and GPUs?
 
 How do all of these implementations compare?
 
-========================================
+----------------------------------------
 Specific approaches I want to try/Questions/Random Notes
 
 Varying problem size
