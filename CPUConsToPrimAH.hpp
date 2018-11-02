@@ -39,6 +39,9 @@ class CPUConsToPrimAH : public Test{
     //Starting and ending indicies [start,end]
     const unsigned int is_,ie_,js_,je_,ks_,ke_;
 
+    //Interior size
+    const unsigned int mi_,mj_,mk_;
+
     //Number of fluid variables
     const unsigned nvars_ = NHYDRO;
 
@@ -95,7 +98,7 @@ class CPUConsToPrimAH : public Test{
     Matrix<T> cons_,prim_;
     
     //Timers 
-    std::chrono::high_resolution_clock::time_point startTime,endTime;
+    std::chrono::high_resolution_clock::time_point startTime_,endTime_;
 
     CPUConsToPrimAH(unsigned int ni, unsigned int nj, unsigned int nk, 
                     unsigned int is, unsigned int ie,
@@ -113,6 +116,7 @@ class CPUConsToPrimAH : public Test{
             is_(is),ie_(ie),
             js_(js),je_(je),
             ks_(ks),ke_(ke),
+            mi_(ie+1-is),mj_(je+1-js),mk_(ke+1-ks),
             pre_step_type_(pre_step_type),
             step_type_(step_type),post_step_type_(post_step_type),
             cons_(nvars_,nk_,nj_,ni_),prim_(nvars_,nk_,nj_,ni_)
@@ -154,7 +158,7 @@ class CPUConsToPrimAH : public Test{
 
     //Start timing (from 0)
     virtual void StartTest(int dim){
-      startTime = std::chrono::high_resolution_clock::now();
+      startTime_ = std::chrono::high_resolution_clock::now();
     }
 
 
@@ -212,13 +216,13 @@ class CPUConsToPrimAH : public Test{
 
     //End timing
     virtual void EndTest(int dim){
-      endTime = std::chrono::high_resolution_clock::now();
+      endTime_ = std::chrono::high_resolution_clock::now();
     }
 
     //Get the seconds between the last start and end
     virtual double ElapsedTime(){
       return std::chrono::duration_cast<std::chrono::nanoseconds>( 
-          endTime - startTime ).count()/1e9;
+          endTime_ - startTime_ ).count()/1e9;
     }
 
     //Release memory
