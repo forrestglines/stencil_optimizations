@@ -7,9 +7,9 @@
 #include <sstream>
 #include <cmath>
 
-#include "Test.hpp"
-#include "TypeName.hpp"
-#include "Matrix.hpp"
+#include "../common/Test.hpp"
+#include "../common/TypeName.hpp"
+#include "../common/Matrix.hpp"
 #include "CheckCuda.cuh"
 
 #define NHYDRO 5
@@ -70,6 +70,7 @@ class CUDAConsToPrimAH : public Test{
         case MemType::kUVM:
           return "kUVM";
       }
+      return "UNKNOWN";
     }
 
     //PostStep,Step,PreStep Types
@@ -151,6 +152,7 @@ class CUDAConsToPrimAH : public Test{
             is_(is),ie_(ie),
             js_(js),je_(je),
             ks_(ks),ke_(ke),
+            max_block_size_(max_block_size),
             mi_(ie+1-is),mj_(je+1-js),mk_(ke+1-ks),
             mem_size_(size_*nvars_*sizeof(T)),
             mem_type_(mem_type),
@@ -280,12 +282,6 @@ class CUDAConsToPrimAH : public Test{
       switch(pre_step_type_){ 
         case PreStepType::kNone: 
           break; 
-        default:
-          std::stringstream ss;
-          ss  << "PreStepType '"
-              << ToString(pre_step_type_)
-              << "' unsupported!";
-          throw ss.str();
         case PreStepType::MemPrefetchAsync:
           //Prefetch to device (or make this a test?)
           device = -1;
@@ -358,7 +354,7 @@ class CUDAConsToPrimAH : public Test{
       //Get the total time used on the GPU
       cudaEventSynchronize(end_time_);
       float milliseconds = 0;
-      cudaEventElapsedTime(&milliseconds, start_time_,end_time_;
+      cudaEventElapsedTime(&milliseconds, start_time_,end_time_);
 
       return milliseconds/1000;
 
@@ -375,8 +371,8 @@ class CUDAConsToPrimAH : public Test{
           CheckCuda(cudaFree(d_prim_));
           break;
         case MemType::kPinned:
-          CheckCuda(cudaHostFree(h_cons_));
-          CheckCuda(cudaHostFree(h_prim_));
+          CheckCuda(cudaFreeHost(h_cons_));
+          CheckCuda(cudaFreeHost(h_prim_));
 
           CheckCuda(cudaFree(d_cons_));
           CheckCuda(cudaFree(d_prim_));
@@ -434,7 +430,7 @@ class CUDAConsToPrimAH : public Test{
           CheckCuda(cudaMemcpy(h_cons_,d_cons_,mem_size_,cudaMemcpyDeviceToHost));
           CheckCuda(cudaMemcpy(h_prim_,d_prim_,mem_size_,cudaMemcpyDeviceToHost));
           break;
-        case MemType::kUVM
+        case MemType::kUVM:
           //Prefetch to host (unneccessary)
           CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,cudaCpuDeviceId,NULL));
           CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,cudaCpuDeviceId,NULL));

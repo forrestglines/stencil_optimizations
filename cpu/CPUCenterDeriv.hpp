@@ -6,8 +6,8 @@
 #include <string>
 #include <sstream>
 
-#include "Test.hpp"
-#include "TypeName.hpp"
+#include "../common/Test.hpp"
+#include "../common/TypeName.hpp"
 
 
 //Class for tests on CPU for centered 2nd derivative

@@ -7,9 +7,9 @@
 #include <sstream>
 #include <cmath>
 
-#include "Test.hpp"
-#include "TypeName.hpp"
-#include "Matrix.hpp"
+#include "../common/Test.hpp"
+#include "../common/TypeName.hpp"
+#include "../common/Matrix.hpp"
 
 
 #define NHYDRO 5

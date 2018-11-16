@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 
-#include "CPUConsToPrimAH.hpp"
+#include "CUDAConsToPrimAH.cuh"
 
 
 #define SQR(X) (X)*(X)
@@ -20,6 +20,8 @@ void CUDAConsToPrimAH<T>::MemcpyConstants(){
       sizeof(double), 0, cudaMemcpyHostToDevice);
 
 }
+template void CUDAConsToPrimAH<float>::MemcpyConstants();
+template void CUDAConsToPrimAH<double>::MemcpyConstants();
 
 /***************************************
   CUDA Kernel for conserved to primitive
@@ -27,7 +29,7 @@ void CUDAConsToPrimAH<T>::MemcpyConstants(){
   naive approach with pencils spanning X
  ***************************************/
 template<typename T>
-__global__ void CUDANaiveConsToPrimAH(
+__global__ void d_CUDANaiveConsToPrimAH(
     T* cons, T* prim, 
     const unsigned int ni, const unsigned int nj, const unsigned int nk,
     const unsigned int is, const unsigned int ie,
@@ -73,11 +75,11 @@ __global__ void CUDANaiveConsToPrimAH(
 template<typename T>
 void CUDAConsToPrimAH<T>::CUDANaiveConsToPrimAH(int dim){
   //Have pencils that span X, and as high as possible in y
-  const dim3 blockDim(mi_, floor(max_block_size_/mi),1);
-  const dim3 gridDim(ceil(mj_/blockDim.y),mz_,1);
+  const dim3 blockDim(mi_, floor(max_block_size_/mi_),1);
+  const dim3 gridDim(ceil(mj_/blockDim.y),mk_,1);
 
-  CUDANaiveConsToPrimAH<<<gridDim,blockDim>>>(d_cons_,d_prim_,
-      ni,nj,nk,is,ie,js,je,ks,ke);
+  d_CUDANaiveConsToPrimAH<<<gridDim,blockDim>>>(d_cons_,d_prim_,
+      ni_,nj_,nk_,is_,ie_,js_,je_,ks_,ke_);
 }
 
 
@@ -92,19 +94,19 @@ template void CUDAConsToPrimAH<double>::CUDANaiveConsToPrimAH(int dim);
   bit cumbersome, to maybe mimic Kokkos
  ***************************************/
 template<typename T>
-__global__ void CUDANaive1DConsToPrimAH(
+__global__ void d_CUDA1DConsToPrimAH(
     T* cons, T* prim, 
     const unsigned int ni, const unsigned int nj, const unsigned int nk,
-    const unsigned minjnk, const unsigned int minj, const unsigned int mi,
+    const unsigned mimjmk, const unsigned int mimj, const unsigned int mi,
     const unsigned int is, 
     const unsigned int js, 
-    const unsigned int ks, )
+    const unsigned int ks)
 {
 
   const unsigned int idx = threadIdx.x + blockDim.x*blockIdx.x;
   unsigned int k = idx / mimj;
   unsigned int j = (idx - k*mimj)/ mi;
-  unsigned int i = idx - k*mjmi - j*mi;
+  unsigned int i = idx - k*mimj - j*mi;
 
   k += ks;
   j += js;
@@ -142,15 +144,16 @@ __global__ void CUDANaive1DConsToPrimAH(
 }
 
 template<typename T>
-void CUDAConsToPrimAH<T>::CUDANaive1DConsToPrimAH(int dim){
+void CUDAConsToPrimAH<T>::CUDA1DConsToPrimAH(int dim){
   //Have blocks as big as needed
   const unsigned int blockDim = max_block_size_;
   //And a grid x dimension that spans the domain
-  const unsigned int gridDim = ceil(mi*mj*mk/max_block_size_;
+  const unsigned int gridDim = ceil(mi_*mj_*mk_/max_block_size_);
 
-  CUDANaive1DConsToPrimAH<<<gridDim,blockDim>>>(d_cons_,d_prim_,
-      ni,nj,nk,mi*mj*mk,mi*mj,mi,is,js,ks);
+  d_CUDA1DConsToPrimAH<<<gridDim,blockDim>>>(
+      d_cons_,d_prim_,
+      ni_,nj_,nk_,mi_*mj_*mk_,mi_*mj_,mi_,is_,js_,ks_);
 }
 
-template void CUDAConsToPrimAH<float>::CUDANaive1DConsToPrimAH(int dim);
-template void CUDAConsToPrimAH<double>::CUDANaive1DConsToPrimAH(int dim);
+template void CUDAConsToPrimAH<float>::CUDA1DConsToPrimAH(int dim);
+template void CUDAConsToPrimAH<double>::CUDA1DConsToPrimAH(int dim);
