@@ -35,6 +35,54 @@ int main(int argc, char** argv){
         CUDAConsToPrimAH<float>::StepType::k1D,
         CUDAConsToPrimAH<float>::PostStepType::kNone
         ) );
+  tests.push_back( new CUDAConsToPrimAH<float>(
+        256,256,256,
+        2,253,
+        2,253,
+        2,253,
+        512,
+        5,
+        CUDAConsToPrimAH<float>::MemType::kPinned,
+        CUDAConsToPrimAH<float>::PreStepType::kNone,
+        CUDAConsToPrimAH<float>::StepType::kNaive,
+        CUDAConsToPrimAH<float>::PostStepType::kNone
+        ) );
+  tests.push_back( new CUDAConsToPrimAH<float>(
+        256,256,256,
+        2,253,
+        2,253,
+        2,253,
+        512,
+        5,
+        CUDAConsToPrimAH<float>::MemType::kPinned,
+        CUDAConsToPrimAH<float>::PreStepType::kNone,
+        CUDAConsToPrimAH<float>::StepType::k1D,
+        CUDAConsToPrimAH<float>::PostStepType::kNone
+        ) );
+  tests.push_back( new CUDAConsToPrimAH<float>(
+        256,256,256,
+        2,253,
+        2,253,
+        2,253,
+        512,
+        5,
+        CUDAConsToPrimAH<float>::MemType::kUVM,
+        CUDAConsToPrimAH<float>::PreStepType::kNone,
+        CUDAConsToPrimAH<float>::StepType::kNaive,
+        CUDAConsToPrimAH<float>::PostStepType::kNone
+        ) );
+  tests.push_back( new CUDAConsToPrimAH<float>(
+        256,256,256,
+        2,253,
+        2,253,
+        2,253,
+        512,
+        5,
+        CUDAConsToPrimAH<float>::MemType::kUVM,
+        CUDAConsToPrimAH<float>::PreStepType::kNone,
+        CUDAConsToPrimAH<float>::StepType::k1D,
+        CUDAConsToPrimAH<float>::PostStepType::kNone
+        ) );
 
   for( auto const& test: tests){
     test->TestAllDims(cout);

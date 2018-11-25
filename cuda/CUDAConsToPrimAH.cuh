@@ -272,6 +272,12 @@ class CUDAConsToPrimAH : public Test{
 
     //Start timing (from 0)
     virtual void StartTest(int dim){
+      //Do one warm-up step
+      PreStep(3);
+      Step(3);
+      PostStep(3);
+
+      cudaDeviceSynchronize();
       cudaEventRecord(start_time_);
     }
 
