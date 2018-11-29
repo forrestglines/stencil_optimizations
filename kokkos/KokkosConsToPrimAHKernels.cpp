@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <cstdio>
 
 #include "KokkosConsToPrimAH.hpp"
 
@@ -18,6 +19,8 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
   }
   Kokkos::parallel_for("MDRangeConsToPrimAH id_: "+id_,policy,
     KOKKOS_LAMBDA ( const IType k, const IType j, const IType i){
+
+      printf(" %d %d %d\n",k,j,i);
       T& u_d  = cons_(IDN,k,j,i);
       T& u_m1 = cons_(IM1,k,j,i);
       T& u_m2 = cons_(IM2,k,j,i);
@@ -31,7 +34,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
       T& w_p  = prim_(IPR,k,j,i);
 
       // apply density floor, without changing momentum or energy
-      u_d = (u_d > density_floor_) ?  u_d : density_floor_;
+      /*u_d = (u_d > density_floor_) ?  u_d : density_floor_;
       w_d = u_d;
 
       T di = 1.0/u_d;
@@ -44,10 +47,13 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
 
       // apply pressure floor, correct total energy
       u_e = (w_p > pressure_floor_) ?  u_e : ((pressure_floor_/gm1_) + ke);
-      w_p = (w_p > pressure_floor_) ?  w_p : pressure_floor_;
+      w_p = (w_p > pressure_floor_) ?  w_p : pressure_floor_;*/
 
     }
   );
+  Kokkos::finalize();
+  fflush(stdout);
+  exit(0);
 }
 
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::KokkosMDRangeConsToPrimAH(int dim);
