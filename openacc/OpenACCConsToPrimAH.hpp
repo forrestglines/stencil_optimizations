@@ -1,5 +1,5 @@
-#ifndef CPU_CONS_TO_PRIM_AH_H_
-#define CPU_CONS_TO_PRIM_AH_H_
+#ifndef OpenACC_CONS_TO_PRIM_AH_H_
+#define OpenACC_CONS_TO_PRIM_AH_H_
 
 #include <chrono>
 #include <ostream>
@@ -28,9 +28,9 @@
 #define IPR 4
 
 
-//Class for tests on CPU for centered 2nd derivative
+//Class for tests on OpenACC for centered 2nd derivative
 template <class T>
-class CPUConsToPrimAH : public Test{
+class OpenACCConsToPrimAH : public Test{
 
   public:
     //Size of the grid
@@ -100,7 +100,7 @@ class CPUConsToPrimAH : public Test{
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime_,endTime_;
 
-    CPUConsToPrimAH(unsigned int ni, unsigned int nj, unsigned int nk, 
+    OpenACCConsToPrimAH(unsigned int ni, unsigned int nj, unsigned int nk, 
                     unsigned int is, unsigned int ie,
                     unsigned int js, unsigned int je,
                     unsigned int ks, unsigned int ke,
@@ -181,13 +181,13 @@ class CPUConsToPrimAH : public Test{
     virtual void Step(int dim){
       switch(step_type_){
         case StepType::kNaive:
-          CPUNaiveConsToPrimAH(dim);
+          OpenACCNaiveConsToPrimAH(dim);
           break;
         case StepType::kNaiveOMP:
-          CPUNaiveOMPConsToPrimAH(dim);
+          OpenACCNaiveOMPConsToPrimAH(dim);
           break;
         case StepType::kNaiveSIMD:
-          CPUNaiveSIMDConsToPrimAH(dim);
+          OpenACCNaiveSIMDConsToPrimAH(dim);
           break;
         default:
           std::stringstream ss;
@@ -236,13 +236,32 @@ class CPUConsToPrimAH : public Test{
     //Different Kernel implementations
     
     //Naive triple for-loop
-    void CPUNaiveConsToPrimAH(int dim);
+    void OpenACCNaiveConsToPrimAH(int dim);
 
     //OMP naive triple for-loop
-    void CPUNaiveOMPConsToPrimAH(int dim);
+    void OpenACCNaiveOMPConsToPrimAH(int dim);
 
     //NaiveSIMD on inner for-loop
-    void CPUNaiveSIMDConsToPrimAH(int dim);
+    void OpenACCNaiveSIMDConsToPrimAH(int dim);
+
+    virtual void PrintTest(std::ostream& os){
+      os <<"OpenACCConsToPrimAH<"<< TypeName<T>() <<">";
+      Test::PrintTest(os);
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
+      os << "size_=" << size_ <<"\t";
+      os << "is_=" << is_ <<"\t";
+      os << "ie_=" << ie_ <<"\t";
+      os << "js_=" << js_ <<"\t";
+      os << "je_=" << je_ <<"\t";
+      os << "ks_=" << ks_ <<"\t";
+      os << "ke_=" << ke_ <<"\t";
+      os << "nvars_=" << nvars_ <<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
+      os << "step_type_=" << ToString(step_type_)<<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+    }
 
     virtual void PrintU(std::ostream& os){
       os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " " << nvars_<<std::endl;
@@ -279,67 +298,7 @@ class CPUConsToPrimAH : public Test{
       os<<std::endl;//Quad space
     }
 
-    //Print the parameters of the test
-    virtual void PrintTestParams(std::ostream& os){
-      os <<"CPUConsToPrimAH<"<< TypeName<T>() <<"> ";
-      os << "ni_=" << ni_ <<"\t";
-      os << "nj_=" << nj_ <<"\t";
-      os << "nk_=" << nk_ <<"\t";
-      os << "size_=" << size_ <<"\t";
-      os << "is_=" << is_ <<"\t";
-      os << "ie_=" << ie_ <<"\t";
-      os << "js_=" << js_ <<"\t";
-      os << "je_=" << je_ <<"\t";
-      os << "ks_=" << ks_ <<"\t";
-      os << "ke_=" << ke_ <<"\t";
-      os << "nvars_=" << nvars_ <<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
-      Test::PrintTestParams(os);
-    }
-
-    //Print the CSV header for this test
-    virtual void PrintTestCSVHeader(std::ostream& os){
-      os << "T" <<"\t";
-      os << "ni_" <<"\t";
-      os << "nj_" <<"\t";
-      os << "nk_" <<"\t";
-      os << "size_" <<"\t";
-      os << "is_" <<"\t";
-      os << "ie_" <<"\t";
-      os << "js_" <<"\t";
-      os << "je_" <<"\t";
-      os << "ks_" <<"\t";
-      os << "ke_" <<"\t";
-      os << "nvars_" <<"\t";
-      os << "pre_step_type_" <<"\t";
-      os << "step_type_" <<"\t";
-      os << "post_step_type_" <<"\t";
-      Test::PrintTestCSVHeader(os);
-    }
-
-    //Print the CSV for this test
-    virtual void PrintTestCSV(std::ostream& os){
-      os << TypeName<T>() <<"\t";
-      os << ni_ <<"\t";
-      os << nj_ <<"\t";
-      os << nk_ <<"\t";
-      os << size_ <<"\t";
-      os << is_ <<"\t";
-      os << ie_ <<"\t";
-      os << js_ <<"\t";
-      os << je_ <<"\t";
-      os << ks_ <<"\t";
-      os << ke_ <<"\t";
-      os << nvars_ <<"\t";
-      os << ToString(pre_step_type_)<<"\t";
-      os << ToString(step_type_)<<"\t";
-      os << ToString(post_step_type_)<<"\t";
-      Test::PrintTestCSV(os);
-    }
-
 
 };
 
-#endif //CPU_CONS_TO_PRIM_AH_H_
+#endif //OpenACC_CONS_TO_PRIM_AH_H_

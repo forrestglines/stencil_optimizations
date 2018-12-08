@@ -1,1 +1,6 @@
-runTests
+bin/
+kokkos/kokkosCPU
+kokkos/kokkosCUDA
+obj/
+
+

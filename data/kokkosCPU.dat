@@ -1,0 +1,13 @@
+T	Layout	IType	ItOuter	ItInner	ni_	nj_	nk_	size_	is_	ie_	js_	je_	ks_	ke_	tiling_[0]	tiling_[1]	tiling_[2]	vector_length_	nvars_	pre_step_type_	step_type_	post_step_type_	ncells_	flops_per_cell_	arith_intensity_	nsteps_	ndims_	elapsed_times_[0]	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Left	Kokkos::Iterate::Left	256	256	256	16777216	2	253	2	253	2	253	256	1	1	0	5	kNone	kMDRange	kNone	16003008	0	0	5	1	11.4241	
+float	Kokkos::LayoutLeft	long	Kokkos::Iterate::Left	Kokkos::Iterate::Left	256	256	256	16777216	2	253	2	253	2	253	256	1	1	0	5	kNone	kMDRange	kNone	16003008	0	0	5	1	5.97109	
+float	Kokkos::LayoutLeft	long	Kokkos::Iterate::Left	Kokkos::Iterate::Right	256	256	256	16777216	2	253	2	253	2	253	256	1	1	0	5	kNone	kMDRange	kNone	16003008	0	0	5	1	6.49655	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Left	Kokkos::Iterate::Right	256	256	256	16777216	2	253	2	253	2	253	256	1	1	0	5	kNone	kMDRange	kNone	16003008	0	0	5	1	11.4432	
+float	Kokkos::LayoutLeft	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	0	5	kNone	k1DRange	kNone	16003008	0	0	5	1	8.74431	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	0	5	kNone	k1DRange	kNone	16003008	0	0	5	1	6.56516	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	1	5	kNone	kTVR	kNone	16003008	0	0	5	1	6.49078	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	32	5	kNone	kTVR	kNone	16003008	0	0	5	1	6.47385	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	64	5	kNone	kTVR	kNone	16003008	0	0	5	1	6.63637	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	1	5	kNone	kTTR	kNone	16003008	0	0	5	1	6.53208	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	32	5	kNone	kTTR	kNone	16003008	0	0	5	1	6.5084	
+float	Kokkos::LayoutRight	long	Kokkos::Iterate::Default	Kokkos::Iterate::Default	256	256	256	16777216	2	253	2	253	2	253	0	0	0	64	5	kNone	kTTR	kNone	16003008	0	0	5	1	6.49241	

@@ -10,17 +10,29 @@
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrimAH(int dim){
 
+  //Create an MDRangePolicy depending on the test parameters
   Kokkos::MDRangePolicy<Kokkos::Rank<3,ItOuter,ItInner>> policy({0,0,0},{0,0,0});
 
   if(tiling_[0] == 0){
+    //Use the default tiling
     policy = Kokkos::MDRangePolicy<Kokkos::Rank<3,ItOuter,ItInner>>({ks_,js_,is_},{ke_+1,je_+1,ie_+1});
   } else {
+    //Use the test provided tiling
     policy = Kokkos::MDRangePolicy<Kokkos::Rank<3,ItOuter,ItInner>>({ks_,js_,is_},{ke_+1,je_+1,ie_+1},tiling_);
   }
+
+  //Alias the member variables to work on the GPU
+  Kokkos::View<T****, Layout,DevSpace>& cons_ = this->cons_;
+  Kokkos::View<T****, Layout,DevSpace>& prim_ = this->prim_;
+
+  const double& density_floor_ = this->density_floor_;
+  const double& pressure_floor_ = this->pressure_floor_;
+  const double& gm1_ = this->gm1_;
+
   Kokkos::parallel_for("MDRangeConsToPrimAH id_: "+id_,policy,
     KOKKOS_LAMBDA ( const IType k, const IType j, const IType i){
 
-      printf(" %d %d %d\n",k,j,i);
+      //printf(" %d %d %d\n",k,j,i);
       T& u_d  = cons_(IDN,k,j,i);
       T& u_m1 = cons_(IM1,k,j,i);
       T& u_m2 = cons_(IM2,k,j,i);
@@ -34,7 +46,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
       T& w_p  = prim_(IPR,k,j,i);
 
       // apply density floor, without changing momentum or energy
-      /*u_d = (u_d > density_floor_) ?  u_d : density_floor_;
+      u_d = (u_d > density_floor_) ?  u_d : density_floor_;
       w_d = u_d;
 
       T di = 1.0/u_d;
@@ -47,13 +59,10 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
 
       // apply pressure floor, correct total energy
       u_e = (w_p > pressure_floor_) ?  u_e : ((pressure_floor_/gm1_) + ke);
-      w_p = (w_p > pressure_floor_) ?  w_p : pressure_floor_;*/
+      w_p = (w_p > pressure_floor_) ?  w_p : pressure_floor_;
 
     }
   );
-  Kokkos::finalize();
-  fflush(stdout);
-  exit(0);
 }
 
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::KokkosMDRangeConsToPrimAH(int dim);
@@ -81,7 +90,18 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::Kokkos1DRangeConsToPrimAH(int dim){
 
+  //Alias the member variables to work on the GPU
+  Kokkos::View<T****, Layout,DevSpace>& cons_ = this->cons_;
+  Kokkos::View<T****, Layout,DevSpace>& prim_ = this->prim_;
 
+  const double& density_floor_ = this->density_floor_;
+  const double& pressure_floor_ = this->pressure_floor_;
+  const double& gm1_ = this->gm1_;
+
+  const int is_ = this->is_, js_ = this->js_, ks_ = this->ks_;
+  const int ie_ = this->ie_, je_ = this->je_, ke_ = this->ke_;
+
+  //Compute some constants for use in the kernel
   const int NK = ke_ - ks_ + 1;
   const int NJ = je_ - js_ + 1;
   const int NI = ie_ - is_ + 1;
@@ -157,6 +177,17 @@ typedef Kokkos::TeamPolicy<>::member_type  member_type;
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosTVRConsToPrimAH(int dim){
 
+  //Alias the member variables to work on the GPU
+  Kokkos::View<T****, Layout,DevSpace>& cons_ = this->cons_;
+  Kokkos::View<T****, Layout,DevSpace>& prim_ = this->prim_;
+
+  const double& density_floor_ = this->density_floor_;
+  const double& pressure_floor_ = this->pressure_floor_;
+  const double& gm1_ = this->gm1_;
+
+  const int is_ = this->is_, js_ = this->js_, ks_ = this->ks_;
+  const int ie_ = this->ie_, je_ = this->je_, ke_ = this->ke_;
+
   const IType NK = ke_ - ks_ + 1;
   const IType NJ = je_ - js_ + 1;
   const IType NKNJ = NK * NJ;
@@ -226,7 +257,18 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosTTRConsToPrimAH(int dim){
+  //Alias the member variables to work on the GPU
+  Kokkos::View<T****, Layout,DevSpace>& cons_ = this->cons_;
+  Kokkos::View<T****, Layout,DevSpace>& prim_ = this->prim_;
 
+  const double& density_floor_ = this->density_floor_;
+  const double& pressure_floor_ = this->pressure_floor_;
+  const double& gm1_ = this->gm1_;
+
+  const int is_ = this->is_, js_ = this->js_, ks_ = this->ks_;
+  const int ie_ = this->ie_, je_ = this->je_, ke_ = this->ke_;
+
+  //Compute some constants for use in the kernel
   const int NK = ke_ - ks_ + 1;
   const int NJ = je_ - js_ + 1;
   const int NKNJ = NK * NJ;

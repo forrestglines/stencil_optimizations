@@ -21,6 +21,9 @@ class Test{
     //Number of dims to try
     unsigned int ndims_;
 
+    //Timings for test in each dimension
+    std::vector<double> elapsed_times_;
+
     Test(unsigned int ncells_,
          unsigned int nsteps, unsigned int ndims,
          unsigned int flops_per_cell, double arith_intensity):
@@ -47,7 +50,7 @@ class Test{
     //End timing
     virtual void EndTest(int dim) = 0;
 
-    //Get the seconds between the last start and end
+    //Get the seconds between the last start and end for the last test
     virtual double ElapsedTime() = 0;
 
     //Run the test, return seconds elapsed
@@ -61,7 +64,11 @@ class Test{
       }
       EndTest(dim);
 
-      return ElapsedTime();
+      double time = ElapsedTime();
+
+      elapsed_times_.push_back(time);
+
+      return time;
     }
 
     virtual void TestAllDims(std::ostream& os){
@@ -83,21 +90,50 @@ class Test{
     //Free Memory
     virtual int Free() = 0;
 
-    //Write the current data to a stream
-    friend std::ostream& operator<<(std::ostream& os, Test& t);
 
+    //Write the current data to a stream
     virtual void PrintU(std::ostream& os) = 0;
-    virtual void PrintTest(std::ostream& os){
+
+    //Print the parameters of the test
+    virtual void PrintTestParams(std::ostream& os){
       os << "ncells_=" << ncells_ <<"\t";
       os << "flops_per_cell_=" << flops_per_cell_ <<"\t";
       os << "arith_intensity_=" << arith_intensity_ <<"\t";
       os << "nsteps_=" << nsteps_ <<"\t";
       os << "ndims_=" << ndims_ <<"\t";
     }
+    //Print the parameters of the test
+    friend std::ostream& operator<<(std::ostream& os, Test& t);
+
+    //Print the csv header for this test
+    virtual void PrintTestCSVHeader(std::ostream& os){
+      os << "ncells_" <<"\t";
+      os << "flops_per_cell_" <<"\t";
+      os << "arith_intensity_" <<"\t";
+      os << "nsteps_" <<"\t";
+      os << "ndims_" <<"\t";
+
+      for(int i =0; i < ndims_ ; i++){
+        os << "elapsed_times_[" << i <<"]\t";
+      }
+    }
+
+    //Print the csv for this test
+    virtual void PrintTestCSV(std::ostream& os){
+      os << ncells_ <<"\t";
+      os << flops_per_cell_ <<"\t";
+      os << arith_intensity_ <<"\t";
+      os << nsteps_ <<"\t";
+      os << ndims_ <<"\t";
+
+      for(int i =0; i < ndims_ ; i++){
+        os << elapsed_times_[i] <<"\t";
+      }
+    }
 };
 
 inline std::ostream& operator<<(std::ostream& os, Test& t){
-  t.PrintTest(os);
+  t.PrintTestParams(os);
   return os;
 }
 

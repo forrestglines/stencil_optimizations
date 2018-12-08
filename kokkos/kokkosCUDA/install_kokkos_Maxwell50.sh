@@ -6,7 +6,7 @@ $KOKKOSDIR/generate_makefile.bash \
 --prefix=$(pwd) \
 --with-cuda \
 --cxxflags="-O3" \
---arch="HSW,Maxwell50" \
+--arch="Maxwell50" \
 --compiler=$KOKKOSDIR/bin/nvcc_wrapper \
 --with-options=disable_deprecated_code \
 --with-cuda-options=enable_lambda

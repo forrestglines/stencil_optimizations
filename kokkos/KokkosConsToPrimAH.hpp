@@ -24,7 +24,7 @@ ENABLE_TYPENAME(Kokkos::LayoutRight);
 #define IM1 1
 #define IM2 2
 #define IM3 3
-#define IEN 3
+#define IEN 4
 
 //Indices for primitive variables
 #define IVX 1
@@ -32,11 +32,8 @@ ENABLE_TYPENAME(Kokkos::LayoutRight);
 #define IVZ 3
 #define IPR 4
 
-
-
-
 //Class for tests on Kokkos for centered 2nd derivative
-template <class T, class Layout=Kokkos::LayoutLeft,class IType=int64_t, 
+template <class T=double, class Layout=Kokkos::LayoutLeft,class IType=int64_t, 
          Kokkos::Iterate ItOuter=Kokkos::Iterate::Default, Kokkos::Iterate ItInner=Kokkos::Iterate::Default>
 class KokkosConsToPrimAH : public Test{
     const unsigned int id_;
@@ -83,7 +80,7 @@ class KokkosConsToPrimAH : public Test{
 
     //PostStep,Step,PreStep Types
     enum class PreStepType: int{
-      kNone,kCopyFromHost,
+      kNone,kCopyFromHost,kUnspecified
     };
     const PreStepType pre_step_type_;
 
@@ -98,7 +95,7 @@ class KokkosConsToPrimAH : public Test{
     }
 
     enum class StepType: int{
-      kMDRange,k1DRange,kTVR,kTTR,
+      kMDRange,k1DRange,kTVR,kTTR,kUnspecified
     };
     const StepType step_type_;
 
@@ -118,7 +115,7 @@ class KokkosConsToPrimAH : public Test{
 
 
     enum class PostStepType: int{
-      kNone,kCopyToHost
+      kNone,kCopyToHost,kUnspecified
     };
     const PostStepType post_step_type_;
 
@@ -285,6 +282,7 @@ class KokkosConsToPrimAH : public Test{
       Kokkos::deep_copy(cons_,h_cons_);
       Kokkos::deep_copy(prim_,h_prim_);
 
+
       return 0;
     }
 
@@ -310,7 +308,6 @@ class KokkosConsToPrimAH : public Test{
               << ToString(pre_step_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -335,7 +332,6 @@ class KokkosConsToPrimAH : public Test{
               << ToString(step_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -353,7 +349,6 @@ class KokkosConsToPrimAH : public Test{
               << ToString(post_step_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -396,36 +391,6 @@ class KokkosConsToPrimAH : public Test{
     //Team Thread Range with Kokkos
     void KokkosTTRConsToPrimAH(int dim);
 
-
-    virtual void PrintTest(std::ostream& os){
-      os <<"KokkosConsToPrimAH<";
-      os << TypeName<T>() << " , ";
-      os << TypeName<Layout>() << " , ";
-      os << TypeName<IType>() << " , ";
-      os << ToString(ItOuter) <<" , ";
-      os << ToString(ItInner);
-      os << ">";
-      Test::PrintTest(os);
-      os << "ni_=" << ni_ <<"\t";
-      os << "nj_=" << nj_ <<"\t";
-      os << "nk_=" << nk_ <<"\t";
-      os << "size_=" << size_ <<"\t";
-      os << "is_=" << is_ <<"\t";
-      os << "ie_=" << ie_ <<"\t";
-      os << "js_=" << js_ <<"\t";
-      os << "je_=" << je_ <<"\t";
-      os << "ks_=" << ks_ <<"\t";
-      os << "ke_=" << ke_ <<"\t";
-      os << "ItOuter_=" << ToString(ItOuter) <<"\t";
-      os << "ItInner_=" << ToString(ItInner) <<"\t";
-      os << "tiling_=" << tiling_[0] << "," << tiling_[1] << "," << tiling_[2]<<"\t";
-      os << "vector_length_=" << vector_length_ <<"\t";
-      os << "nvars_=" << nvars_ <<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
-    }
-
     virtual void PrintU(std::ostream& os){
       os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " " << nvars_<<std::endl;
 
@@ -460,6 +425,91 @@ class KokkosConsToPrimAH : public Test{
       }
       os<<std::endl;//Quad space
     }
+
+    //Print the parameters of the test
+    virtual void PrintTestParams(std::ostream& os){
+      os <<"KokkosConsToPrimAH<";
+      os << TypeName<T>() << " , ";
+      os << TypeName<Layout>() << " , ";
+      os << TypeName<IType>() << " , ";
+      os << ToString(ItOuter) <<" , ";
+      os << ToString(ItInner);
+      os << "> ";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
+      os << "size_=" << size_ <<"\t";
+      os << "is_=" << is_ <<"\t";
+      os << "ie_=" << ie_ <<"\t";
+      os << "js_=" << js_ <<"\t";
+      os << "je_=" << je_ <<"\t";
+      os << "ks_=" << ks_ <<"\t";
+      os << "ke_=" << ke_ <<"\t";
+      os << "tiling_=" << tiling_[0] << "," << tiling_[1] << "," << tiling_[2]<<"\t";
+      os << "vector_length_=" << vector_length_ <<"\t";
+      os << "nvars_=" << nvars_ <<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
+      os << "step_type_=" << ToString(step_type_)<<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+      Test::PrintTestParams(os);
+    }
+
+    //Print the csv header for this test
+    virtual void PrintTestCSVHeader(std::ostream& os){
+      os << "T"       << "\t";
+      os << "Layout"  << "\t";
+      os << "IType"   <<"\t";
+      os << "ItOuter" <<"\t";
+      os << "ItInner" <<"\t";
+      os << "ni_" <<"\t";
+      os << "nj_" <<"\t";
+      os << "nk_" <<"\t";
+      os << "size_" <<"\t";
+      os << "is_" <<"\t";
+      os << "ie_" <<"\t";
+      os << "js_" <<"\t";
+      os << "je_" <<"\t";
+      os << "ks_" <<"\t";
+      os << "ke_" <<"\t";
+      os << "tiling_[0]"<<"\t";
+      os << "tiling_[1]"<<"\t";
+      os << "tiling_[2]"<<"\t";
+      os << "vector_length_" <<"\t";
+      os << "nvars_" <<"\t";
+      os << "pre_step_type_" <<"\t";
+      os << "step_type_" <<"\t";
+      os << "post_step_type_" <<"\t";
+      Test::PrintTestCSVHeader(os);
+    }
+
+    //Print the csv for this test
+    virtual void PrintTestCSV(std::ostream& os){
+      os << TypeName<T>() << "\t";
+      os << TypeName<Layout>() << "\t";
+      os << TypeName<IType>() << "\t";
+      os << ToString(ItOuter) << "\t";
+      os << ToString(ItInner) << "\t";
+      os << ni_ <<"\t";
+      os << nj_ <<"\t";
+      os << nk_ <<"\t";
+      os << size_ <<"\t";
+      os << is_ <<"\t";
+      os << ie_ <<"\t";
+      os << js_ <<"\t";
+      os << je_ <<"\t";
+      os << ks_ <<"\t";
+      os << ke_ <<"\t";
+      os << tiling_[0] <<"\t";
+      os << tiling_[1] <<"\t";
+      os << tiling_[2] <<"\t";
+      os << vector_length_ <<"\t";
+      os << nvars_ <<"\t";
+      os << ToString(pre_step_type_)<<"\t";
+      os << ToString(step_type_)<<"\t";
+      os << ToString(post_step_type_)<<"\t";
+      Test::PrintTestCSV(os);
+    }
+
 
 
 };
