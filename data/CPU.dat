@@ -1,0 +1,4 @@
+T	ni_	nj_	nk_	size_	is_	ie_	js_	je_	ks_	ke_	nvars_	pre_step_type_	step_type_	post_step_type_	ncells_	flops_per_cell_	arith_intensity_	nsteps_	ndims_	elapsed_times_[0]	
+float	256	256	256	16777216	2	253	2	253	2	253	5	kNone	kNaive	kNone	16003008	0	0	5	1	2.03858	
+float	256	256	256	16777216	2	253	2	253	2	253	5	kNone	kNaiveOMP	kNone	16003008	0	0	5	1	2.139	
+float	256	256	256	16777216	2	253	2	253	2	253	5	kNone	kNaiveSIMD	kNone	16003008	0	0	5	1	2.32441	

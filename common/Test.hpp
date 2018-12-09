@@ -2,6 +2,7 @@
 #define TEST_H_
 
 #include <ostream>
+#include <vector>
 
 class Test{
 

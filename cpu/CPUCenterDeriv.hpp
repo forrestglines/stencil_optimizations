@@ -197,20 +197,7 @@ class CPUCenterDeriv : public Test{
     //NaiveSIMD on inner for-loop
     void CPUNaiveSIMDCenterDeriv(int dim);
 
-    virtual void PrintTest(std::ostream& os){
-      os <<"CPUCenterDeriv<"<< TypeName<T>() <<">";
-      Test::PrintTest(os);
-      os << "ni_=" << ni_ <<"\t";
-      os << "nj_=" << nj_ <<"\t";
-      os << "nk_=" << nk_ <<"\t";
-      os << "size_=" << size_ <<"\t";
-      os << "ng_=" << ng_ <<"\t";
-      os << "stencil_size_" << stencil_size_<<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
-    }
-
+    //Write the current data to a stream
     virtual void PrintU(std::ostream& os){
       os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " "<<std::endl;
 
@@ -238,6 +225,52 @@ class CPUCenterDeriv : public Test{
         os<<std::endl;//Double space for z breaks
       }
     }
+
+    //Print the parameters of the test
+    virtual void PrintTestParams(std::ostream& os){
+      os <<"CPUCenterDeriv<"<< TypeName<T>() <<"> ";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
+      os << "size_=" << size_ <<"\t";
+      os << "ng_=" << ng_ <<"\t";
+      os << "stencil_size_" << stencil_size_<<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
+      os << "step_type_=" << ToString(step_type_)<<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+      Test::PrintTestParams(os);
+    }
+
+    //Print the csv header for this test
+    virtual void PrintTestCSVHeader(std::ostream& os){
+      os <<"T"<<"\t";
+      os << "ni_" <<"\t";
+      os << "nj_" <<"\t";
+      os << "nk_" <<"\t";
+      os << "size_" <<"\t";
+      os << "ng_" <<"\t";
+      os << "stencil_size_"<<"\t";
+      os << "pre_step_type_"<<"\t";
+      os << "step_type_"<<"\t";
+      os << "post_step_type_"<<"\t";
+      Test::PrintTestCSVHeader(os);
+    }
+
+    //Print the csv for this test
+    virtual void PrintTestCSV(std::ostream& os){
+      os << TypeName<T>() <<"\t";
+      os << ni_ <<"\t";
+      os << nj_ <<"\t";
+      os << nk_ <<"\t";
+      os << size_ <<"\t";
+      os << ng_ <<"\t";
+      os << stencil_size_ <<"\t";
+      os << ToString(pre_step_type_) <<"\t";
+      os << ToString(step_type_) <<"\t";
+      os << ToString(post_step_type_) <<"\t";
+      Test::PrintTestCSV(os);
+    }
+
 
 
 };

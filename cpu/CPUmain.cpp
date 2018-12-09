@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <ostream>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -10,6 +11,11 @@ using namespace std;
 
 
 int main(int argc, char** argv){
+  if(argc != 2){
+    cout<<"Expected a filename for csv output!"<<endl;
+    return 0;
+  }
+
   vector<Test*> tests;
 
   tests.push_back( new CPUConsToPrimAH<float>(
@@ -37,41 +43,29 @@ int main(int argc, char** argv){
         CPUConsToPrimAH<float>::PostStepType::kNone
         ) );
 
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,3,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaive,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,7,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaive,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,3,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaiveOMP,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,7,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaiveOMP,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,3,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaiveSIMD,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CPUCenterDeriv<float>(32,32,32,7,1000,
-        CPUCenterDeriv<float>::PreStepType::kNone,
-        CPUCenterDeriv<float>::StepType::kNaiveSIMD,
-        CPUCenterDeriv<float>::PostStepType::kNone
-        ) );
+  //Open a file for csv output
+  ofstream fout;
+  fout.open(argv[1]);
+
+  //First write the CSV Headers
+  tests[0]->PrintTestCSVHeader(fout);
+  fout <<endl;
 
   for( auto const& test: tests){
+
+    //Run all variations of the test
     test->TestAllDims(cout);
+
+    //Write parameters and timings to csv
+    test->PrintTestCSV(fout);
+    fout <<endl;
+
+    //Done with this test, free it's memory
     delete test;
   }
+
+  //Close the csv file
+  fout.close();
 
 
   return 0;
