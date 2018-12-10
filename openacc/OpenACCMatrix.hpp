@@ -1,16 +1,16 @@
 #ifndef MATRIX_H_
 #define MATRIX_H_
 template <class T>
-class Matrix{
+class OpenACCMatrix{
   public:
     const unsigned int n1_,n2_,n3_,n4_;
 
 
-    Matrix(int n3, int n2, int n1):
+    OpenACCMatrix(int n3, int n2, int n1):
       n1_(n1),n2_(n2),n3_(n3),n4_(1), data_(NULL),is_my_mem_(false){}
-    Matrix(int n4, int n3, int n2, int n1):
+    OpenACCMatrix(int n4, int n3, int n2, int n1):
       n1_(n1),n2_(n2),n3_(n3),n4_(n4), data_(NULL),is_my_mem_(false){} 
-    ~Matrix(){
+    ~OpenACCMatrix(){
       Free();
     }
 

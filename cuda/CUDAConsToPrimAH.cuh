@@ -19,7 +19,7 @@
 #define IM1 1
 #define IM2 2
 #define IM3 3
-#define IEN 3
+#define IEN 4
 
 //Indices for primitive variables
 #define IVX 1
@@ -202,7 +202,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(mem_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
 
 
@@ -252,7 +251,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(mem_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
 
       //Move the constant symbols onto the device
@@ -304,7 +302,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(mem_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -323,7 +320,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(step_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -346,7 +342,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(post_step_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
     }
 
@@ -393,7 +388,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(mem_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
       return 0;
     }
@@ -406,27 +400,7 @@ class CUDAConsToPrimAH : public Test{
     //1D flattened indices implementation
     void CUDA1DConsToPrimAH(int dim);
 
-    virtual void PrintTest(std::ostream& os){
-      os <<"CUDAConsToPrimAH<"<< TypeName<T>() <<">";
-      Test::PrintTest(os);
-      os << "ni_=" << ni_ <<"\t";
-      os << "nj_=" << nj_ <<"\t";
-      os << "nk_=" << nk_ <<"\t";
-      os << "size_=" << size_ <<"\t";
-      os << "is_=" << is_ <<"\t";
-      os << "ie_=" << ie_ <<"\t";
-      os << "js_=" << js_ <<"\t";
-      os << "je_=" << je_ <<"\t";
-      os << "ks_=" << ks_ <<"\t";
-      os << "ke_=" << ke_ <<"\t";
-      os << "nvars_=" << nvars_ <<"\t";
-      os << "mem_size_=" << mem_size_ <<"\t";
-      os << "mem_type_=" << ToString(mem_type_)<<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
-    }
-
+    //Write the current data to a stream
     virtual void PrintU(std::ostream& os){
       //Copy the data to host
       switch( mem_type_){
@@ -447,7 +421,6 @@ class CUDAConsToPrimAH : public Test{
               << ToString(mem_type_)
               << "' unsupported!";
           throw ss.str();
-          break;
       }
       cudaDeviceSynchronize();
 
@@ -485,6 +458,71 @@ class CUDAConsToPrimAH : public Test{
       os<<std::endl;//Quad space
     }
 
+    //Print the parameters of the test
+    virtual void PrintTestParams(std::ostream& os){
+      os << "CUDAConsToPrimAH<" << TypeName<T>() <<"> ";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
+      os << "size_=" << size_ <<"\t";
+      os << "is_=" << is_ <<"\t";
+      os << "ie_=" << ie_ <<"\t";
+      os << "js_=" << js_ <<"\t";
+      os << "je_=" << je_ <<"\t";
+      os << "ks_=" << ks_ <<"\t";
+      os << "ke_=" << ke_ <<"\t";
+      os << "nvars_=" << nvars_ <<"\t";
+      os << "mem_size_=" << mem_size_ <<"\t";
+      os << "mem_type_=" << ToString(mem_type_) <<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_) <<"\t";
+      os << "step_type_=" << ToString(step_type_) <<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_) <<"\t";
+      Test::PrintTestParams(os);
+    }
+
+    //Print the csv header for this test
+    virtual void PrintTestCSVHeader(std::ostream& os){
+      os << "T" <<"\t";
+      os << "ni_" <<"\t";
+      os << "nj_" <<"\t";
+      os << "nk_" <<"\t";
+      os << "size_" <<"\t";
+      os << "is_" <<"\t";
+      os << "ie_" <<"\t";
+      os << "js_" <<"\t";
+      os << "je_" <<"\t";
+      os << "ks_" <<"\t";
+      os << "ke_" <<"\t";
+      os << "nvars_" <<"\t";
+      os << "mem_size_" <<"\t";
+      os << "mem_type_" <<"\t";
+      os << "pre_step_type_" <<"\t";
+      os << "step_type_" <<"\t";
+      os << "post_step_type_" <<"\t";
+      Test::PrintTestCSVHeader(os);
+    }
+
+    //Print the csv for this test
+    virtual void PrintTestCSV(std::ostream& os){
+      os << TypeName<T>() <<"\t";
+      os << ni_ <<"\t";
+      os << nj_ <<"\t";
+      os << nk_ <<"\t";
+      os << size_ <<"\t";
+      os << is_ <<"\t";
+      os << ie_ <<"\t";
+      os << js_ <<"\t";
+      os << je_ <<"\t";
+      os << ks_ <<"\t";
+      os << ke_ <<"\t";
+      os << nvars_ <<"\t";
+      os << mem_size_ <<"\t";
+      os << ToString(mem_type_) <<"\t";
+      os << ToString(pre_step_type_) <<"\t";
+      os << ToString(step_type_) <<"\t";
+      os << ToString(post_step_type_) <<"\t";
+      Test::PrintTestCSV(os);
+    }
 
 };
 

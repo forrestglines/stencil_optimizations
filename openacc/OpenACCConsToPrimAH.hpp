@@ -9,7 +9,8 @@
 
 #include "../common/Test.hpp"
 #include "../common/TypeName.hpp"
-#include "../common/Matrix.hpp"
+//#include "../common/Matrix.hpp"
+#include "OpenACCMatrix.hpp"
 
 
 #define NHYDRO 5
@@ -19,7 +20,7 @@
 #define IM1 1
 #define IM2 2
 #define IM3 3
-#define IEN 3
+#define IEN 4
 
 //Indices for primitive variables
 #define IVX 1
@@ -35,6 +36,9 @@ class OpenACCConsToPrimAH : public Test{
   public:
     //Size of the grid
     const unsigned int ni_,nj_,nk_,size_;
+
+    //Total memory size
+    const unsigned int mem_size_;
 
     //Starting and ending indicies [start,end]
     const unsigned int is_,ie_,js_,je_,ks_,ke_;
@@ -64,7 +68,7 @@ class OpenACCConsToPrimAH : public Test{
     }
 
     enum class StepType: int{
-      kNaive,kNaiveOMP,kNaiveSIMD,
+      kNaive,
     };
     const StepType step_type_;
 
@@ -72,10 +76,6 @@ class OpenACCConsToPrimAH : public Test{
       switch(type){
       case StepType::kNaive:
         return "kNaive";
-      case StepType::kNaiveOMP:
-        return "kNaiveOMP";
-      case StepType::kNaiveSIMD:
-        return "kNaiveSIMD";
       }
       return "UNKNOWN";
     }
@@ -95,7 +95,7 @@ class OpenACCConsToPrimAH : public Test{
     }
 
     //The Conserved and Primitive data
-    Matrix<T> cons_,prim_;
+    OpenACCMatrix<T> cons_,prim_;
     
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime_,endTime_;
@@ -113,6 +113,7 @@ class OpenACCConsToPrimAH : public Test{
               0, //flops_per_cell
               0),//arith_intensity
             ni_(ni),nj_(nj),nk_(nk), size_(ni*nj*nk),
+            mem_size_(nvars_*ni*nj*nk),
             is_(is),ie_(ie),
             js_(js),je_(je),
             ks_(ks),ke_(ke),
@@ -153,11 +154,15 @@ class OpenACCConsToPrimAH : public Test{
         }
       }
 
+
       return 0;
     }
 
     //Start timing (from 0)
     virtual void StartTest(int dim){
+      //Move the data to the device
+//#pragma acc enter data copyin(cons_[0:mem_size_])
+//#pragma acc enter data copyin(prim_[0:mem_size_])
       startTime_ = std::chrono::high_resolution_clock::now();
     }
 
@@ -182,12 +187,6 @@ class OpenACCConsToPrimAH : public Test{
       switch(step_type_){
         case StepType::kNaive:
           OpenACCNaiveConsToPrimAH(dim);
-          break;
-        case StepType::kNaiveOMP:
-          OpenACCNaiveOMPConsToPrimAH(dim);
-          break;
-        case StepType::kNaiveSIMD:
-          OpenACCNaiveSIMDConsToPrimAH(dim);
           break;
         default:
           std::stringstream ss;
@@ -217,6 +216,9 @@ class OpenACCConsToPrimAH : public Test{
     //End timing
     virtual void EndTest(int dim){
       endTime_ = std::chrono::high_resolution_clock::now();
+      //Move the data off the device
+//#pragma acc exit data copyout(cons_)
+//#pragma acc eixt data copyout(prim_)
     }
 
     //Get the seconds between the last start and end
@@ -237,31 +239,6 @@ class OpenACCConsToPrimAH : public Test{
     
     //Naive triple for-loop
     void OpenACCNaiveConsToPrimAH(int dim);
-
-    //OMP naive triple for-loop
-    void OpenACCNaiveOMPConsToPrimAH(int dim);
-
-    //NaiveSIMD on inner for-loop
-    void OpenACCNaiveSIMDConsToPrimAH(int dim);
-
-    virtual void PrintTest(std::ostream& os){
-      os <<"OpenACCConsToPrimAH<"<< TypeName<T>() <<">";
-      Test::PrintTest(os);
-      os << "ni_=" << ni_ <<"\t";
-      os << "nj_=" << nj_ <<"\t";
-      os << "nk_=" << nk_ <<"\t";
-      os << "size_=" << size_ <<"\t";
-      os << "is_=" << is_ <<"\t";
-      os << "ie_=" << ie_ <<"\t";
-      os << "js_=" << js_ <<"\t";
-      os << "je_=" << je_ <<"\t";
-      os << "ks_=" << ks_ <<"\t";
-      os << "ke_=" << ke_ <<"\t";
-      os << "nvars_=" << nvars_ <<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
-    }
 
     virtual void PrintU(std::ostream& os){
       os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " " << nvars_<<std::endl;
@@ -296,6 +273,66 @@ class OpenACCConsToPrimAH : public Test{
         os<<std::endl;//Triple space for var breaks
       }
       os<<std::endl;//Quad space
+    }
+
+    //Print the parameters of the test
+    virtual void PrintTestParams(std::ostream& os){
+      os <<"CPUConsToPrimAH<"<< TypeName<T>() <<"> ";
+      os << "ni_=" << ni_ <<"\t";
+      os << "nj_=" << nj_ <<"\t";
+      os << "nk_=" << nk_ <<"\t";
+      os << "size_=" << size_ <<"\t";
+      os << "is_=" << is_ <<"\t";
+      os << "ie_=" << ie_ <<"\t";
+      os << "js_=" << js_ <<"\t";
+      os << "je_=" << je_ <<"\t";
+      os << "ks_=" << ks_ <<"\t";
+      os << "ke_=" << ke_ <<"\t";
+      os << "nvars_=" << nvars_ <<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
+      os << "step_type_=" << ToString(step_type_)<<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+      Test::PrintTestParams(os);
+    }
+
+    //Print the CSV header for this test
+    virtual void PrintTestCSVHeader(std::ostream& os){
+      os << "T" <<"\t";
+      os << "ni_" <<"\t";
+      os << "nj_" <<"\t";
+      os << "nk_" <<"\t";
+      os << "size_" <<"\t";
+      os << "is_" <<"\t";
+      os << "ie_" <<"\t";
+      os << "js_" <<"\t";
+      os << "je_" <<"\t";
+      os << "ks_" <<"\t";
+      os << "ke_" <<"\t";
+      os << "nvars_" <<"\t";
+      os << "pre_step_type_" <<"\t";
+      os << "step_type_" <<"\t";
+      os << "post_step_type_" <<"\t";
+      Test::PrintTestCSVHeader(os);
+    }
+
+    //Print the CSV for this test
+    virtual void PrintTestCSV(std::ostream& os){
+      os << TypeName<T>() <<"\t";
+      os << ni_ <<"\t";
+      os << nj_ <<"\t";
+      os << nk_ <<"\t";
+      os << size_ <<"\t";
+      os << is_ <<"\t";
+      os << ie_ <<"\t";
+      os << js_ <<"\t";
+      os << je_ <<"\t";
+      os << ks_ <<"\t";
+      os << ke_ <<"\t";
+      os << nvars_ <<"\t";
+      os << ToString(pre_step_type_)<<"\t";
+      os << ToString(step_type_)<<"\t";
+      os << ToString(post_step_type_)<<"\t";
+      Test::PrintTestCSV(os);
     }
 
 

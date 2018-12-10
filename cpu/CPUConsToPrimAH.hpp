@@ -19,7 +19,7 @@
 #define IM1 1
 #define IM2 2
 #define IM3 3
-#define IEN 3
+#define IEN 4
 
 //Indices for primitive variables
 #define IVX 1
