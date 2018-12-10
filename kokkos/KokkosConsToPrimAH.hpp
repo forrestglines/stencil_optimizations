@@ -290,7 +290,10 @@ class KokkosConsToPrimAH : public Test{
     virtual void StartTest(int dim){
       //Sync to device?
       Kokkos::fence();
+      std::stringstream ss;
+      ss<<"KokkosConsToPrimAH dim:"<<dim<<" id:"<<id_;
       startTime_ = std::chrono::high_resolution_clock::now();
+      Kokkos::Profiling::pushRegion(ss.str());
     }
 
 
@@ -355,6 +358,7 @@ class KokkosConsToPrimAH : public Test{
     //End timing
     virtual void EndTest(int dim){
       Kokkos::fence();
+      Kokkos::Profiling::popRegion();
       endTime_ = std::chrono::high_resolution_clock::now();
     }
 
