@@ -1,19 +1,14 @@
 #include <string>
 #include <iostream>
 
-#include "CPUConsToPrimAH.hpp"
-
-
 #define SQR(X) (X)*(X)
 
 template<typename T>
 void CPUConsToPrimAH<T>::CPUNaiveConsToPrimAH(int dim){
 
-  int i,j,k;
-
-  for(k = ks_; k <= ke_; k++){
-    for(j = js_; j <= je_; j++){
-      for(i = is_; i <= ie_; i++){
+  for(int k = ks_; k <= ke_; k++){
+    for(int j = js_; j <= je_; j++){
+      for(int i = is_; i <= ie_; i++){
       T& u_d  = cons_(IDN,k,j,i);
       T& u_m1 = cons_(IM1,k,j,i);
       T& u_m2 = cons_(IM2,k,j,i);
@@ -46,19 +41,15 @@ void CPUConsToPrimAH<T>::CPUNaiveConsToPrimAH(int dim){
     }
   }
 }
-
-template void CPUConsToPrimAH<float>::CPUNaiveConsToPrimAH(int dim);
-template void CPUConsToPrimAH<double>::CPUNaiveConsToPrimAH(int dim);
 
 template<typename T>
 void CPUConsToPrimAH<T>::CPUNaiveOMPConsToPrimAH(int dim){
 
-  int i,j,k;
 
   #pragma omp parallel for collapse(3)
-  for(k = ks_; k <= ke_; k++){
-    for(j = js_; j <= je_; j++){
-      for(i = is_; i <= ie_; i++){
+  for(int k = ks_; k <= ke_; k++){
+    for(int j = js_; j <= je_; j++){
+      for(int i = is_; i <= ie_; i++){
       T& u_d  = cons_(IDN,k,j,i);
       T& u_m1 = cons_(IM1,k,j,i);
       T& u_m2 = cons_(IM2,k,j,i);
@@ -91,20 +82,15 @@ void CPUConsToPrimAH<T>::CPUNaiveOMPConsToPrimAH(int dim){
     }
   }
 }
-
-template void CPUConsToPrimAH<float>::CPUNaiveOMPConsToPrimAH(int dim);
-template void CPUConsToPrimAH<double>::CPUNaiveOMPConsToPrimAH(int dim);
 
 template<typename T>
 void CPUConsToPrimAH<T>::CPUNaiveSIMDConsToPrimAH(int dim){
 
-  int i,j,k;
-
   #pragma omp parallel for collapse(2)
-  for(k = ks_; k <= ke_; k++){
-    for(j = js_; j <= je_; j++){
+  for(int k = ks_; k <= ke_; k++){
+    for(int j = js_; j <= je_; j++){
       #pragma omp simd
-      for(i = is_; i <= ie_; i++){
+      for(int i = is_; i <= ie_; i++){
       T& u_d  = cons_(IDN,k,j,i);
       T& u_m1 = cons_(IM1,k,j,i);
       T& u_m2 = cons_(IM2,k,j,i);
@@ -137,6 +123,3 @@ void CPUConsToPrimAH<T>::CPUNaiveSIMDConsToPrimAH(int dim){
     }
   }
 }
-
-template void CPUConsToPrimAH<float>::CPUNaiveSIMDConsToPrimAH(int dim);
-template void CPUConsToPrimAH<double>::CPUNaiveSIMDConsToPrimAH(int dim);

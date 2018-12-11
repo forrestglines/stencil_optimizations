@@ -11,21 +11,7 @@
 #include "../common/TypeName.hpp"
 #include "../common/Matrix.hpp"
 
-
-#define NHYDRO 5
-
-//Indices for conserved variables
-#define IDN 0
-#define IM1 1
-#define IM2 2
-#define IM3 3
-#define IEN 4
-
-//Indices for primitive variables
-#define IVX 1
-#define IVY 2
-#define IVZ 3
-#define IPR 4
+#include "../common/ConsToPrimAH.hpp"
 
 
 //Class for tests on CPU for centered 2nd derivative
@@ -45,9 +31,9 @@ class CPUConsToPrimAH : public Test{
     //Number of fluid variables
     const unsigned nvars_ = NHYDRO;
 
-    const double density_floor_ = 0.01;
-    const double pressure_floor_ = 0.01;
-    const double gm1_ = 1.666666667;
+    const double density_floor_ = density_floor;
+    const double pressure_floor_ = pressure_floor;
+    const double gm1_ = gm1;
 
     //PostStep,Step,PreStep Types
     enum class PreStepType: int{
@@ -341,5 +327,7 @@ class CPUConsToPrimAH : public Test{
 
 
 };
+
+#include "CPUConsToPrimAHKernels.hpp"
 
 #endif //CPU_CONS_TO_PRIM_AH_H_

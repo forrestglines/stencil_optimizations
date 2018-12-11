@@ -21,119 +21,130 @@ int main(int argc, char** argv){
 
   vector<Test*> tests;
 
+
+  //General options
+  //int dimensions[][3] = {{32,32,32},{64,64,64},{256,256,256},{512,128,128}};
+  //int dimensions[][3] = {{256,256,256}};
+  int dimensions[][3] = {{64,64,64},{256,256,256},{512,128,128}};
+  int ghost_zones[] = {0,2};
+  int nsteps = 5;
+
+  //MDRange specific options
+  int tilings[][7] = { {512,1,1}, {512,2,1},{256,1,1},{256,2,1},{256,4,1},{128,4,1},{64,8,1}};
+
+  //TVR/TTR specifc options
+  int vector_lengths[] = {1,32,64};
+
+  //ID counter for tests
   int id = 0;
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        Kokkos::Array<int64_t,3>({256,1,1}),
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::StepType::kMDRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::PostStepType::kNone,
-        id++) );
-
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        Kokkos::Array<int64_t,3>({256,1,1}),
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::StepType::kMDRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        Kokkos::Array<int64_t,3>({256,1,1}),
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::StepType::kMDRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::PostStepType::kNone,
-        id++) );
 
 
+  //Create the MDRange tests
+  for( auto dimension : dimensions){
+    for( auto ng : ghost_zones){
+      for( auto tiling : tilings){
+#define TEST_MDRANGE_TYPE(T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_) \
+        tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>( \
+              dimension[0],dimension[1],dimension[2], \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              nsteps, \
+              Kokkos::Array<IT_,3>({tiling[0],tiling[1],tiling[2]}), \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>::PreStepType::kNone, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>::StepType::kMDRange, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>::PostStepType::kNone, \
+              id++) );
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left   ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right  ,Kokkos::Iterate::Default)
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Left   )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Right  )
+      TEST_MDRANGE_TYPE(double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default)
 
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        Kokkos::Array<int64_t,3>({256,1,1}),
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::StepType::kMDRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::PostStepType::kNone,
-        id++) );
+      }
+    }
 
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutLeft>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft>::StepType::k1DRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutLeft>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::k1DRange,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
+  }
+  //Create 1DRange tests
+  for( auto dimension : dimensions){
+    for( auto ng : ghost_zones){
+#define TEST_1DRANGE_TYPE(T_,LAYOUT_,IT_) \
+      tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
+            dimension[0],dimension[1],dimension[2], \
+            ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+            nsteps, \
+            KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
+            KokkosConsToPrimAH<T_,LAYOUT_,IT_>::StepType::k1DRange, \
+            KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PostStepType::kNone, \
+            id++) );
+      TEST_1DRANGE_TYPE(float ,Kokkos::LayoutLeft ,int64_t)
+      TEST_1DRANGE_TYPE(float ,Kokkos::LayoutRight,int64_t)
+      TEST_1DRANGE_TYPE(double,Kokkos::LayoutLeft ,int64_t)
+      TEST_1DRANGE_TYPE(double,Kokkos::LayoutRight,int64_t)
+    }
+  }
 
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        1,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTVR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        32,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTVR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        64,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTVR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        1,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTTR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        32,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTTR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
-  tests.push_back( new KokkosConsToPrimAH<float,Kokkos::LayoutRight>(
-        256,256,256,
-        2,253,2,253,2,253,
-        5,
-        64,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PreStepType::kNone,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::StepType::kTTR,
-        KokkosConsToPrimAH<float,Kokkos::LayoutRight>::PostStepType::kNone,
-        id++) );
+  //Create TVR/TTR tests
+  for( auto dimension : dimensions){
+    for( auto ng : ghost_zones){
+      for( auto vector_length : vector_lengths){
+#define TEST_TVR_TTR_TYPE(T_,LAYOUT_,IT_) \
+        tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
+              dimension[0],dimension[1],dimension[2], \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              nsteps, \
+              vector_length, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::StepType::kTVR, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PostStepType::kNone, \
+              id++) ); \
+        tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
+              dimension[0],dimension[1],dimension[2], \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              nsteps, \
+              vector_length, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::StepType::kTTR, \
+              KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PostStepType::kNone, \
+              id++) );
+        TEST_TVR_TTR_TYPE(float ,Kokkos::LayoutLeft ,int64_t)
+        TEST_TVR_TTR_TYPE(float ,Kokkos::LayoutRight,int64_t)
+        TEST_TVR_TTR_TYPE(double,Kokkos::LayoutLeft ,int64_t)
+        TEST_TVR_TTR_TYPE(double,Kokkos::LayoutRight,int64_t)
+      }
+    }
+  }
+
+  std::cout<<"Number of tests : "<<tests.size()<<std::endl;
 
 
   //Open a file for csv output

@@ -2,8 +2,6 @@
 #include <iostream>
 #include <cstdio>
 
-#include "KokkosConsToPrimAH.hpp"
-
 
 #define SQR(X) (X)*(X)
 
@@ -64,7 +62,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosMDRangeConsToPrim
     }
   );
 }
-
+/*
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::KokkosMDRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::KokkosMDRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosMDRangeConsToPrimAH(int dim);
@@ -86,6 +84,7 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosMDRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Left>::KokkosMDRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Right>::KokkosMDRangeConsToPrimAH(int dim);
+*/
 
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::Kokkos1DRangeConsToPrimAH(int dim){
@@ -149,6 +148,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::Kokkos1DRangeConsToPrim
 	);
 }
 
+/*
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::Kokkos1DRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::Kokkos1DRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::Kokkos1DRangeConsToPrimAH(int dim);
@@ -170,6 +170,7 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::Kokkos1DRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Left>::Kokkos1DRangeConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Right>::Kokkos1DRangeConsToPrimAH(int dim);
+*/
 
 typedef Kokkos::TeamPolicy<>               team_policy;
 typedef Kokkos::TeamPolicy<>::member_type  member_type;
@@ -232,7 +233,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosTVRConsToPrimAH(i
     }
   );
 }
-
+/*
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::KokkosTVRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::KokkosTVRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosTVRConsToPrimAH(int dim);
@@ -254,6 +255,7 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosTVRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Left>::KokkosTVRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Right>::KokkosTVRConsToPrimAH(int dim);
+*/
 
 template<typename T,typename Layout,typename IType,Kokkos::Iterate ItOuter, Kokkos::Iterate ItInner>
 void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosTTRConsToPrimAH(int dim){
@@ -313,7 +315,7 @@ void KokkosConsToPrimAH<T,Layout,IType,ItOuter,ItInner>::KokkosTTRConsToPrimAH(i
     }
   );
 }
-
+/*
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Default,Kokkos::Iterate::Default>::KokkosTTRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Left>::KokkosTTRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<float,Kokkos::LayoutLeft,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosTTRConsToPrimAH(int dim);
@@ -335,3 +337,4 @@ template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iter
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Left,Kokkos::Iterate::Right>::KokkosTTRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Left>::KokkosTTRConsToPrimAH(int dim);
 template void KokkosConsToPrimAH<double,Kokkos::LayoutRight,int64_t,Kokkos::Iterate::Right,Kokkos::Iterate::Right>::KokkosTTRConsToPrimAH(int dim);
+*/
