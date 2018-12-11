@@ -30,7 +30,7 @@ int main(int argc, char** argv){
   int nsteps = 5;
 
   //MDRange specific options
-  int tilings[][7] = { {512,1,1}, {512,2,1},{256,1,1},{256,2,1},{256,4,1},{128,4,1},{64,8,1}};
+  int tilings[][7] = { {512,1,1}, {512,2,1}, {64,8,1}};//,{256,1,1},{256,2,1},{256,4,1},{128,4,1},{64,8,1}};
 
   //TVR/TTR specifc options
   int vector_lengths[] = {1,32,64};
@@ -46,7 +46,7 @@ int main(int argc, char** argv){
 #define TEST_MDRANGE_TYPE(T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_) \
         tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>( \
               dimension[0],dimension[1],dimension[2], \
-              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, \
               nsteps, \
               Kokkos::Array<IT_,3>({tiling[0],tiling[1],tiling[2]}), \
               KokkosConsToPrimAH<T_,LAYOUT_,IT_,IT_OUTER_,IT_INNER_>::PreStepType::kNone, \
@@ -100,7 +100,7 @@ int main(int argc, char** argv){
 #define TEST_1DRANGE_TYPE(T_,LAYOUT_,IT_) \
       tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
             dimension[0],dimension[1],dimension[2], \
-            ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+            ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, \
             nsteps, \
             KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
             KokkosConsToPrimAH<T_,LAYOUT_,IT_>::StepType::k1DRange, \
@@ -120,7 +120,7 @@ int main(int argc, char** argv){
 #define TEST_TVR_TTR_TYPE(T_,LAYOUT_,IT_) \
         tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
               dimension[0],dimension[1],dimension[2], \
-              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, \
               nsteps, \
               vector_length, \
               KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
@@ -129,7 +129,7 @@ int main(int argc, char** argv){
               id++) ); \
         tests.push_back( new KokkosConsToPrimAH<T_,LAYOUT_,IT_>( \
               dimension[0],dimension[1],dimension[2], \
-              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng, \
+              ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, \
               nsteps, \
               vector_length, \
               KokkosConsToPrimAH<T_,LAYOUT_,IT_>::PreStepType::kNone, \
