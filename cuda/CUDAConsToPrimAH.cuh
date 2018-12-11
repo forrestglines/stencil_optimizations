@@ -146,8 +146,8 @@ class CUDAConsToPrimAH : public Test{
                      PostStepType post_step_type):
         Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
               nsteps, 1,
-              0, //flops_per_cell
-              0),//arith_intensity
+              15., //flops_per_cell
+              15./(sizeof(T)*8)),//arith_intensity
             ni_(ni),nj_(nj),nk_(nk), size_(ni*nj*nk),
             is_(is),ie_(ie),
             js_(js),je_(je),
@@ -525,5 +525,7 @@ class CUDAConsToPrimAH : public Test{
     }
 
 };
+
+#include "CUDAConsToPrimAHKernels.cuh"
 
 #endif //CUDA_CONS_TO_PRIM_AH_H_

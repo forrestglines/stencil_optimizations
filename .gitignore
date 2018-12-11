@@ -1,5 +1,7 @@
 bin/
 kokkos/kokkosCPU
 kokkos/kokkosCUDA
+kokkos/kokkosUVM
+*.swp
 obj/
 core.*

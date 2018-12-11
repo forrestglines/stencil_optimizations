@@ -17,78 +17,58 @@ int main(int argc, char** argv){
 
   vector<Test*> tests;
 
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kMalloc,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::kNaive,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kMalloc,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::k1D,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kPinned,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::kNaive,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kPinned,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::k1D,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kUVM,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::kNaive,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
-  tests.push_back( new CUDAConsToPrimAH<float>(
-        256,256,256,
-        2,253,
-        2,253,
-        2,253,
-        512,
-        5,
-        CUDAConsToPrimAH<float>::MemType::kUVM,
-        CUDAConsToPrimAH<float>::PreStepType::kNone,
-        CUDAConsToPrimAH<float>::StepType::k1D,
-        CUDAConsToPrimAH<float>::PostStepType::kNone
-        ) );
+  //General options
+  int dimensions[][3] = {{64,64,64},{256,256,256},{512,128,128}};
+  int ghost_zones[] = {0,2};
+  int nsteps = 5;
+
+  typedef  CUDAConsToPrimAH<float> FloatTest;
+  FloatTest::MemType float_mem_types[] = {
+    FloatTest::MemType::kMalloc,
+    FloatTest::MemType::kPinned,
+    FloatTest::MemType::kUVM,
+  };
+  FloatTest::StepType float_step_types[] = {
+    FloatTest::StepType::kNaive,
+    FloatTest::StepType::k1D,
+  };
+  typedef  CUDAConsToPrimAH<double> DoubleTest;
+  DoubleTest::MemType double_mem_types[] = {
+    DoubleTest::MemType::kMalloc,
+    DoubleTest::MemType::kPinned,
+    DoubleTest::MemType::kUVM,
+  };
+  DoubleTest::StepType double_step_types[] = {
+    DoubleTest::StepType::kNaive,
+    DoubleTest::StepType::k1D,
+  };
+
+  for( auto dimension : dimensions){
+    for( auto ng : ghost_zones){
+      for(int mem_type_idx = 0; mem_type_idx < 3; mem_type_idx++){
+        for(int step_type_idx = 0; step_type_idx < 2; step_type_idx++){
+          tests.push_back( new CUDAConsToPrimAH<float>(
+                dimension[0],dimension[1],dimension[2], 
+                ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
+                nsteps, 
+                float_mem_types[mem_type_idx],
+                CUDAConsToPrimAH<float>::PreStepType::kNone,
+                float_step_types[step_type_idx],
+                CUDAConsToPrimAH<float>::PostStepType::kNone
+                ) );
+          tests.push_back( new CUDAConsToPrimAH<double>(
+                dimension[0],dimension[1],dimension[2], 
+                ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
+                nsteps, 
+                double_mem_types[mem_type_idx],
+                CUDAConsToPrimAH<double>::PreStepType::kNone,
+                double_step_types[step_type_idx],
+                CUDAConsToPrimAH<double>::PostStepType::kNone
+                ) );
+        }
+      }
+    }
+  }
 
   //Open a file for csv output
   ofstream fout;

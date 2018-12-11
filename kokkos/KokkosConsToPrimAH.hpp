@@ -129,13 +129,21 @@ class KokkosConsToPrimAH : public Test{
       return "UNKNOWN";
     }
 
-    typedef Kokkos::DefaultExecutionSpace DevSpace;
+#ifdef KOKKOS_ENABLE_CUDA_UVM
+    typedef Kokkos::CudaUVMSpace     DevSpace;
+    typedef Kokkos::CudaUVMSpace     HostSpace;
+#else
+    typedef Kokkos::DefaultExecutionSpace     DevSpace;
+    typedef Kokkos::HostSpace                 HostSpace;
+
+#endif
+
 
     //The Conserved and Primitive data
     Kokkos::View<T****, Layout,DevSpace> cons_,prim_;
 
     //Copy of data on host
-    Kokkos::View<T****, Layout,Kokkos::HostSpace> h_cons_,h_prim_;
+    Kokkos::View<T****, Layout,HostSpace> h_cons_,h_prim_;
     
     //Timers 
     std::chrono::high_resolution_clock::time_point startTime_,endTime_;
