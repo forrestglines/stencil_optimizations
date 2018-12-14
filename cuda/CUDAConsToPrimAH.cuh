@@ -146,8 +146,8 @@ class CUDAConsToPrimAH : public Test{
                      PostStepType post_step_type):
         Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
               nsteps, 1,
-              0, //flops_per_cell
-              0),//arith_intensity
+              15., //flops_per_cell
+              15./(sizeof(T)*8)),//arith_intensity
             ni_(ni),nj_(nj),nk_(nk), size_(ni*nj*nk),
             is_(is),ie_(ie),
             js_(js),je_(je),
@@ -170,6 +170,9 @@ class CUDAConsToPrimAH : public Test{
           //Allocate memory normally, with a device and host space
           cons_.Malloc();
           prim_.Malloc();
+
+          h_cons_ = cons_.data_;
+          h_prim_ = prim_.data_;
 
           CheckCuda( cudaMalloc(&d_cons_, mem_size_) );
           CheckCuda( cudaMalloc(&d_prim_, mem_size_) );
@@ -242,8 +245,8 @@ class CUDAConsToPrimAH : public Test{
           //Prefetch to device (or make this a test?)
           device = -1;
           CheckCuda(cudaGetDevice(&device));
-          CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,device,NULL));
-          CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,device,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,0,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,0,NULL));
           break;
         default:
           std::stringstream ss;
@@ -412,8 +415,8 @@ class CUDAConsToPrimAH : public Test{
           break;
         case MemType::kUVM:
           //Prefetch to host (unneccessary)
-          CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,cudaCpuDeviceId,NULL));
-          CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,cudaCpuDeviceId,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,cudaCpuDeviceId,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,cudaCpuDeviceId,NULL));
           break;
         default:
           std::stringstream ss;
@@ -525,5 +528,7 @@ class CUDAConsToPrimAH : public Test{
     }
 
 };
+
+#include "CUDAConsToPrimAHKernels.cuh"
 
 #endif //CUDA_CONS_TO_PRIM_AH_H_

@@ -1,6 +1,8 @@
 #ifndef CHECK_CUDA_H_
 #define CHECK_CUDA_H_
 
+#include <cassert>
+
 // Convenience function for checking CUDA runtime API results
 // can be wrapped around anj runtime API call. No-op in release builds.
 inline

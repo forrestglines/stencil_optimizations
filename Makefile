@@ -11,7 +11,7 @@ LDLIBS :=
 
 #CUDA Compiler flags
 NVCC := nvcc
-NVCCFLAGS := 
+NVCCFLAGS :=  -std=c++11
 
 
 #Kokkos Compiler flags

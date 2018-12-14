@@ -1,5 +1,8 @@
 bin/
 kokkos/kokkosCPU
 kokkos/kokkosCUDA
+kokkos/kokkosUVM
+*.swp
 obj/
 notebooks/.ipynb_checkpoints
+core.*

@@ -1,8 +1,6 @@
 #include <string>
 #include <iostream>
 
-#include "CUDAConsToPrimAH.cuh"
-
 
 #define SQR(X) (X)*(X)
 
@@ -20,8 +18,6 @@ void CUDAConsToPrimAH<T>::MemcpyConstants(){
       sizeof(double), 0, cudaMemcpyHostToDevice);
 
 }
-template void CUDAConsToPrimAH<float>::MemcpyConstants();
-template void CUDAConsToPrimAH<double>::MemcpyConstants();
 
 /***************************************
   CUDA Kernel for conserved to primitive
@@ -82,9 +78,6 @@ void CUDAConsToPrimAH<T>::CUDANaiveConsToPrimAH(int dim){
       ni_,nj_,nk_,is_,ie_,js_,je_,ks_,ke_);
 }
 
-
-template void CUDAConsToPrimAH<float>::CUDANaiveConsToPrimAH(int dim);
-template void CUDAConsToPrimAH<double>::CUDANaiveConsToPrimAH(int dim);
 
 
 /***************************************
@@ -154,6 +147,3 @@ void CUDAConsToPrimAH<T>::CUDA1DConsToPrimAH(int dim){
       d_cons_,d_prim_,
       ni_,nj_,nk_,mi_*mj_*mk_,mi_*mj_,mi_,is_,js_,ks_);
 }
-
-template void CUDAConsToPrimAH<float>::CUDA1DConsToPrimAH(int dim);
-template void CUDAConsToPrimAH<double>::CUDA1DConsToPrimAH(int dim);
