@@ -171,6 +171,9 @@ class CUDAConsToPrimAH : public Test{
           cons_.Malloc();
           prim_.Malloc();
 
+          h_cons_ = cons_.data_;
+          h_prim_ = prim_.data_;
+
           CheckCuda( cudaMalloc(&d_cons_, mem_size_) );
           CheckCuda( cudaMalloc(&d_prim_, mem_size_) );
           break;
@@ -242,8 +245,8 @@ class CUDAConsToPrimAH : public Test{
           //Prefetch to device (or make this a test?)
           device = -1;
           CheckCuda(cudaGetDevice(&device));
-          CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,device,NULL));
-          CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,device,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,0,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,0,NULL));
           break;
         default:
           std::stringstream ss;
@@ -412,8 +415,8 @@ class CUDAConsToPrimAH : public Test{
           break;
         case MemType::kUVM:
           //Prefetch to host (unneccessary)
-          CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,cudaCpuDeviceId,NULL));
-          CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,cudaCpuDeviceId,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_cons_,mem_size_,cudaCpuDeviceId,NULL));
+          //CheckCuda(cudaMemPrefetchAsync(d_prim_,mem_size_,cudaCpuDeviceId,NULL));
           break;
         default:
           std::stringstream ss;

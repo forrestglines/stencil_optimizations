@@ -611,3 +611,1032 @@ KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , 
 KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
 1.52506
 KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.51955
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.52496
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.52483
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.51824
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.52507
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.291633
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.390494
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.290147
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.291983
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.392062
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.291091
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.290385
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.391212
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.291523
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58431
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.55228
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58471
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58412
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.55214
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58462
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58712
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.55585
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.58727
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.128957
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.129182
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.128905
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.128904
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.129173
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.12893
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.12892
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.129165
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.128949
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45029
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.43061
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45143
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45206
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.43048
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45203
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45209
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.43054
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45131
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248502
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.336014
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248342
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248485
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.335423
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248546
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248603
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.335537
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.248503
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52276
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.50491
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52286
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52317
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.50505
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52336
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52287
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.50495
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52271
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.13337
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.132764
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.133381
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.133378
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.13268
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.133285
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.133352
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.132695
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.133235
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41636
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.34477
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41643
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41648
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.34482
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41604
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41643
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.34503
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.41606
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.272565
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.253037
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.272605
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.272589
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.252715
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.272609
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.27261
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.252612
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.27255
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37101
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37164
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37096
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37088
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37181
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37098
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37102
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37174
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.37085
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131882
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131849
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131864
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131814
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131883
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131934
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131903
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131841
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.131886
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46298
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45479
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46243
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46251
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45541
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46385
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46355
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.45518
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+1.46347
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.291064
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.395712
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.288436
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.289975
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.396012
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.289505
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.28971
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.395073
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.290681
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.51991
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.49039
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.51973
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.51976
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.49046
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.51954
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.52025
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.49055
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+1.51914
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639748
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0616258
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639833
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639964
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0616392
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639963
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639999
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.061625
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0639997
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.758936
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.745147
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.759048
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.758953
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.745321
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.759115
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.759006
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.745139
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.762263
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123747
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.139782
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123735
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123717
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.139924
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123737
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123727
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.139985
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.123621
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785898
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.759514
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785338
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785701
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.759329
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785346
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785029
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.759537
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.785246
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0805466
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.080066
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0805873
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0806202
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.08009
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0805825
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0804821
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0800874
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0806449
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707629
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.619818
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.708007
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.708011
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.619662
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707784
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707641
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.619551
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707774
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174377
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.132489
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174393
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174379
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.132527
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174412
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174387
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.132481
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.174371
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642455
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642879
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642357
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642465
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642924
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642496
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642503
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642898
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.642402
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0621039
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0619799
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0621241
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0621052
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0619936
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0621131
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0621167
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0619999
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0620996
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.762134
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.76064
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.762374
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.761904
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.760672
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.761812
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.762107
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.760969
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.76258
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.148043
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.198396
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.147699
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.147648
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.198314
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.14712
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.147104
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.198601
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.147913
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796903
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.783056
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796874
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796214
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.782937
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796815
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796621
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.782642
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.796895
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629192
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.062634
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629264
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629411
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0626315
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629302
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629407
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0626129
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0629444
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.711206
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.696361
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.711265
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.71106
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.696646
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.711331
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.711175
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.696576
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.711288
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122817
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.14063
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122846
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122857
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.140272
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122803
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122815
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.140379
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.122903
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.734909
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.694186
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.735339
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.735245
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.694465
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.73532
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.735133
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.69393
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,1,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.735069
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789303
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0791091
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789375
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789711
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0791717
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789516
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789129
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0791225
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0789027
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651329
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.577947
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651435
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651263
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.57789
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651459
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651142
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.578079
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.651691
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.170788
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.130124
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.17075
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.170773
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.130128
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.170756
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.17075
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.1301
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.170756
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602097
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602603
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602216
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602173
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602545
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602165
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602105
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602672
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=512,2,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.602127
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651169
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651187
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651027
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.065106
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651559
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651149
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651231
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651136
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.0651102
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707546
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.706142
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.708105
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.70785
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.705833
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707812
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707942
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.705744
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.46875	nsteps_=5	ndims_=1	
+0.707762
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141518
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.195457
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141564
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141526
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.195091
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141209
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141417
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.194054
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.141203
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.746941
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.733796
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Left , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.747533
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.747353
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.734993
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Right , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.747515
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Left> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.747635
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Right> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.734765
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=64,8,1	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=kMDRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=15	arith_intensity_=0.234375	nsteps_=5	ndims_=1	
+0.747634
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0120046
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00178745
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0209522
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0032238
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00843113
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00189707
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0188783
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00331869
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.91067
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0928014
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.42675
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.184489
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.78908
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0988879
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.27676
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.18943
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.809279
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0465395
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.823902
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0921294
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.754274
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0487414
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.765992
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=0	nvars_=5	pre_step_type_=kNone	step_type_=k1DRange	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0935787
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0232252
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00984285
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0262069
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00188767
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0239175
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0151403
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0267812
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00327994
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0212595
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00699683
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00254998
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00684942
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0267974
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00874204
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00408848
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00808389
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0124981
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0119044
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00207792
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0118113
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0172442
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0129974
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00341985
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=0	ie_=63	js_=0	je_=63	ks_=0	ke_=63	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=262144	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.012976
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0193556
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00714082
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0219337
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00196218
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0201297
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0118054
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0226447
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00329144
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0177431
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00603027
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00256883
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00597999
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0223325
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00751385
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00400898
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00726127
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0101613
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0100853
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00211657
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0100349
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0152332
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0111429
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.00342763
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=64	nj_=64	nk_=64	size_=262144	is_=2	ie_=61	js_=2	je_=61	ks_=2	ke_=61	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=216000	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.011215
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.57021
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.89445
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.61938
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0921394
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.62659
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.42416
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.65931
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.186847
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+7.11784
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.8056
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.134911
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.406844
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+8.93805
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.07054
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.234471
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.485312
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+3.67293
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.66847
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.104871
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.718959
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+4.63166
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+3.28697
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.192717
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=0	ie_=255	js_=0	je_=255	ks_=0	ke_=255	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16777216	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.792493
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.49605
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.77271
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.54868
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0999547
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.55405
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.27458
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.59035
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.197433
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+6.62225
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.68968
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.147455
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.392684
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+8.34593
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.93657
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.242712
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.472132
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+3.43294
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.4621
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.113198
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.689144
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+4.33671
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+3.08283
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.202438
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=256	nj_=256	nk_=256	size_=16777216	is_=2	ie_=253	js_=2	je_=253	ks_=2	ke_=253	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=16003008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.763565
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.731675
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.799618
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.810534
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.046072
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.767206
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.865774
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.829884
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0938355
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.2657
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.610908
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0674526
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.204478
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.66398
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.839693
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.117459
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.243686
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.41263
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.45843
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0522845
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.359767
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.49667
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.12137
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0963755
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=0	ie_=511	js_=0	je_=127	ks_=0	ke_=127	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=8388608	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.396639
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.686432
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.745098
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.759624
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0504409
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.717825
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.807514
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.780007
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=1	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.10013
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.09546
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.539486
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0728674
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.193232
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+2.41425
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.770148
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.120402
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=32	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.232512
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.31208
+KokkosConsToPrimAH<float , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.420848
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.0563287
+KokkosConsToPrimAH<float , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.337934
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.38757
+KokkosConsToPrimAH<double , Kokkos::LayoutLeft , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+1.01491
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTVR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.100715
+KokkosConsToPrimAH<double , Kokkos::LayoutRight , long , Kokkos::Iterate::Default , Kokkos::Iterate::Default> ni_=512	nj_=128	nk_=128	size_=8388608	is_=2	ie_=509	js_=2	je_=125	ks_=2	ke_=125	tiling_=0,0,0	vector_length_=64	nvars_=5	pre_step_type_=kNone	step_type_=kTTR	post_step_type_=kNone	ncells_=7811008	flops_per_cell_=0	arith_intensity_=0	nsteps_=5	ndims_=1	
+0.374957

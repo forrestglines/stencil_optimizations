@@ -19,7 +19,9 @@ int main(int argc, char** argv){
 
   //General options
   int dimensions[][3] = {{64,64,64},{256,256,256},{512,128,128}};
+  //int dimensions[][3] = {{512,128,128}};
   int ghost_zones[] = {0,2};
+  int max_block_sizes[] = {256,512,1024};
   int nsteps = 5;
 
   typedef  CUDAConsToPrimAH<float> FloatTest;
@@ -45,30 +47,37 @@ int main(int argc, char** argv){
 
   for( auto dimension : dimensions){
     for( auto ng : ghost_zones){
-      for(int mem_type_idx = 0; mem_type_idx < 3; mem_type_idx++){
-        for(int step_type_idx = 0; step_type_idx < 2; step_type_idx++){
-          tests.push_back( new CUDAConsToPrimAH<float>(
-                dimension[0],dimension[1],dimension[2], 
-                ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
-                nsteps, 
-                float_mem_types[mem_type_idx],
-                CUDAConsToPrimAH<float>::PreStepType::kNone,
-                float_step_types[step_type_idx],
-                CUDAConsToPrimAH<float>::PostStepType::kNone
-                ) );
-          tests.push_back( new CUDAConsToPrimAH<double>(
-                dimension[0],dimension[1],dimension[2], 
-                ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
-                nsteps, 
-                double_mem_types[mem_type_idx],
-                CUDAConsToPrimAH<double>::PreStepType::kNone,
-                double_step_types[step_type_idx],
-                CUDAConsToPrimAH<double>::PostStepType::kNone
-                ) );
+      for( auto max_block_size : max_block_sizes){
+        if(max_block_size < dimension[0])
+          continue;
+        for(int mem_type_idx = 0; mem_type_idx < 3; mem_type_idx++){
+          for(int step_type_idx = 0; step_type_idx < 2; step_type_idx++){
+            tests.push_back( new CUDAConsToPrimAH<float>(
+                  dimension[0],dimension[1],dimension[2], 
+                  ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
+                  max_block_size,
+                  nsteps, 
+                  float_mem_types[mem_type_idx],
+                  CUDAConsToPrimAH<float>::PreStepType::kNone,
+                  float_step_types[step_type_idx],
+                  CUDAConsToPrimAH<float>::PostStepType::kNone
+                  ) );
+            tests.push_back( new CUDAConsToPrimAH<double>(
+                  dimension[0],dimension[1],dimension[2], 
+                  ng,dimension[0]-ng-1,ng,dimension[1]-ng-1,ng,dimension[2]-ng-1, 
+                  max_block_size,
+                  nsteps, 
+                  double_mem_types[mem_type_idx],
+                  CUDAConsToPrimAH<double>::PreStepType::kNone,
+                  double_step_types[step_type_idx],
+                  CUDAConsToPrimAH<double>::PostStepType::kNone
+                  ) );
+          }
         }
       }
     }
   }
+  cout<< "Num tests: "<<tests.size()<<endl;
 
   //Open a file for csv output
   ofstream fout;
