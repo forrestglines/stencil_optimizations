@@ -32,6 +32,96 @@ ENABLE_TYPENAME(Kokkos::LayoutRight);
 #define IVZ 3
 #define IPR 4
 
+#ifdef KOKKOS_ENABLE_CUDA_UVM
+    typedef Kokkos::CudaUVMSpace     DevSpace;
+    typedef Kokkos::CudaUVMSpace     HostSpace;
+#else
+    typedef Kokkos::DefaultExecutionSpace     DevSpace;
+    typedef Kokkos::HostSpace                 HostSpace;
+
+#endif
+
+////////////////////////////////////////////////////////////////////////////////
+// PostStep, Step, Func, PreStep Types
+////////////////////////////////////////////////////////////////////////////////
+enum class PreStepType: int{
+  kNone,kCopyFromHost,kUnspecified
+};
+
+std::string ToString(PreStepType type){
+  switch(type){
+  case PreStepType::kNone:
+    return "kNone";
+  case PreStepType::kCopyFromHost:
+    return "kCopyFromHost";
+  }
+  return "UNKNOWN";
+}
+
+enum class StepType: int{
+  kMDRange,k1DRange,kTVR,kTTR,kUnspecified
+};
+
+std::string ToString(StepType type){
+  switch(type){
+  case StepType::kMDRange:
+    return "kMDRange";
+  case StepType::k1DRange:
+    return "k1DRange";
+  case StepType::kTVR:
+    return "kTVR";
+  case StepType::kTTR:
+    return "kTTR";
+  }
+  return "UNKNOWN";
+}
+
+enum class FuncType: int{
+  kLambda,kFunctor
+};
+
+std::string ToString(FuncType type){
+  switch(type){
+  case FuncType::kLambda:
+    return "kLambda";
+  case FuncType::kFunctor:
+    return "kFunctor";
+  }
+  return "UNKNOWN";
+}
+
+enum class PostStepType: int{
+  kNone,kCopyToHost,kUnspecified
+};
+
+std::string ToString(PostStepType type){
+  switch(type){
+  case PostStepType::kNone:
+    return "kNone";
+  case PostStepType::kCopyToHost:
+    return "kCopyToHost";
+  }
+  return "UNKNOWN";
+}
+
+std::string ToString( Kokkos::Iterate it){
+  switch(it){
+    case Kokkos::Iterate::Default:
+      return "Kokkos::Iterate::Default";
+    case Kokkos::Iterate::Left:
+      return "Kokkos::Iterate::Left";
+    case Kokkos::Iterate::Right:
+      return "Kokkos::Iterate::Right";
+    default:
+      return "UNKNOWN ITERATOR";
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// KokkosConsToPrimAH Test Class
+////////////////////////////////////////////////////////////////////////////////
+
 //Class for tests on Kokkos for centered 2nd derivative
 template <class T=double, class Layout=Kokkos::LayoutLeft,class IType=int64_t, 
          Kokkos::Iterate ItOuter=Kokkos::Iterate::Default, Kokkos::Iterate ItInner=Kokkos::Iterate::Default>
@@ -51,21 +141,15 @@ class KokkosConsToPrimAH : public Test{
     //Number of fluid variables
     const unsigned int nvars_ = NHYDRO;
 
+    // PostStep, Step, Func, PreStep Types
+    const PreStepType pre_step_type_;
+    const StepType step_type_;
+    const FuncType func_type_;
+    const PostStepType post_step_type_;
+
     //MDRange Parameters
     const Kokkos::Array<IType,3> tiling_;
 
-    std::string ToString( Kokkos::Iterate it){
-      switch(it){
-        case Kokkos::Iterate::Default:
-          return "Kokkos::Iterate::Default";
-        case Kokkos::Iterate::Left:
-          return "Kokkos::Iterate::Left";
-        case Kokkos::Iterate::Right:
-          return "Kokkos::Iterate::Right";
-        default:
-          return "UNKNOWN ITERATOR";
-      }
-    }
 
     //1D Parameters
     //Chunk Size?
@@ -77,67 +161,6 @@ class KokkosConsToPrimAH : public Test{
     const double density_floor_ = 0.01;
     const double pressure_floor_ = 0.01;
     const double gm1_ = 1.666666667;
-
-    //PostStep,Step,PreStep Types
-    enum class PreStepType: int{
-      kNone,kCopyFromHost,kUnspecified
-    };
-    const PreStepType pre_step_type_;
-
-    std::string ToString(PreStepType type){
-      switch(type){
-      case PreStepType::kNone:
-        return "kNone";
-      case PreStepType::kCopyFromHost:
-        return "kCopyFromHost";
-      }
-      return "UNKNOWN";
-    }
-
-    enum class StepType: int{
-      kMDRange,k1DRange,kTVR,kTTR,kUnspecified
-    };
-    const StepType step_type_;
-
-    std::string ToString(StepType type){
-      switch(type){
-      case StepType::kMDRange:
-        return "kMDRange";
-      case StepType::k1DRange:
-        return "k1DRange";
-      case StepType::kTVR:
-        return "kTVR";
-      case StepType::kTTR:
-        return "kTTR";
-      }
-      return "UNKNOWN";
-    }
-
-
-    enum class PostStepType: int{
-      kNone,kCopyToHost,kUnspecified
-    };
-    const PostStepType post_step_type_;
-
-    std::string ToString(PostStepType type){
-      switch(type){
-      case PostStepType::kNone:
-        return "kNone";
-      case PostStepType::kCopyToHost:
-        return "kCopyToHost";
-      }
-      return "UNKNOWN";
-    }
-
-#ifdef KOKKOS_ENABLE_CUDA_UVM
-    typedef Kokkos::CudaUVMSpace     DevSpace;
-    typedef Kokkos::CudaUVMSpace     HostSpace;
-#else
-    typedef Kokkos::DefaultExecutionSpace     DevSpace;
-    typedef Kokkos::HostSpace                 HostSpace;
-
-#endif
-
 
     //The Conserved and Primitive data
     Kokkos::View<T****, Layout,DevSpace> cons_,prim_;
@@ -157,6 +180,7 @@ class KokkosConsToPrimAH : public Test{
                    Kokkos::Array<IType,3> tiling,
                    PreStepType pre_step_type, 
                    StepType step_type, 
+                   FuncType func_type, 
                    PostStepType post_step_type,
                    int id):
         Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
@@ -171,7 +195,9 @@ class KokkosConsToPrimAH : public Test{
             tiling_(tiling),
             vector_length_(0),
             pre_step_type_(pre_step_type),
-            step_type_(step_type),post_step_type_(post_step_type),
+            step_type_(step_type),
+            func_type_(func_type),
+            post_step_type_(post_step_type),
             //cons_(nvars_,nk_,nj_,ni_),prim_(nvars_,nk_,nj_,ni_),
             id_(id)
         {
@@ -191,6 +217,7 @@ class KokkosConsToPrimAH : public Test{
                     unsigned int nsteps,
                    PreStepType pre_step_type, 
                    StepType step_type, 
+                   FuncType func_type, 
                    PostStepType post_step_type,
                    int id):
         Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
@@ -205,7 +232,9 @@ class KokkosConsToPrimAH : public Test{
             tiling_({0,0,0}),
             vector_length_(0),
             pre_step_type_(pre_step_type),
-            step_type_(step_type),post_step_type_(post_step_type),
+            step_type_(step_type),
+            func_type_(func_type),
+            post_step_type_(post_step_type),
             //cons_(nvars_,nk_,nj_,ni_),prim_(nvars_,nk_,nj_,ni_),
             id_(id)
         {
@@ -227,6 +256,7 @@ class KokkosConsToPrimAH : public Test{
                    unsigned int vector_length,
                    PreStepType pre_step_type, 
                    StepType step_type, 
+                   FuncType func_type, 
                    PostStepType post_step_type,
                    int id):
         Test( (ie+1-is)*(je+1-js)*(ke+1-ks),
@@ -241,7 +271,9 @@ class KokkosConsToPrimAH : public Test{
             tiling_({0,0,0}),
             vector_length_(vector_length),
             pre_step_type_(pre_step_type),
-            step_type_(step_type),post_step_type_(post_step_type),
+            step_type_(step_type),
+            func_type_(func_type),
+            post_step_type_(post_step_type),
             //cons_(nvars_,nk_,nj_,ni_),prim_(nvars_,nk_,nj_,ni_),
             id_(id)
         {
@@ -393,15 +425,19 @@ class KokkosConsToPrimAH : public Test{
     
     //MDRangePolicy with Kokkos
     void KokkosMDRangeConsToPrimAH(int dim);
+    struct KokkosMDRangeConsToPrimAHFunctor;
     
     //1D Range with Kokkos
     void Kokkos1DRangeConsToPrimAH(int dim);
+    struct Kokkos1DRangeConsToPrimAHFunctor;
 
     //Team Vector Range with Kokkos
     void KokkosTVRConsToPrimAH(int dim);
+    struct KokkosTVRConsToPrimAHFunctor;
 
     //Team Thread Range with Kokkos
     void KokkosTTRConsToPrimAH(int dim);
+    struct KokkosTTRConsToPrimAHFunctor;
 
     virtual void PrintU(std::ostream& os){
       os<<"#"<< ni_ << " "<< nj_ << " " << nk_ << " " << nvars_<<std::endl;
@@ -460,9 +496,10 @@ class KokkosConsToPrimAH : public Test{
       os << "tiling_=" << tiling_[0] << "," << tiling_[1] << "," << tiling_[2]<<"\t";
       os << "vector_length_=" << vector_length_ <<"\t";
       os << "nvars_=" << nvars_ <<"\t";
-      os << "pre_step_type_=" << ToString(pre_step_type_)<<"\t";
-      os << "step_type_=" << ToString(step_type_)<<"\t";
-      os << "post_step_type_=" << ToString(post_step_type_)<<"\t";
+      os << "pre_step_type_=" << ToString(pre_step_type_) <<"\t";
+      os << "step_type_=" << ToString(step_type_) <<"\t";
+      os << "func_type_=" << ToString(func_type_) <<"\t";
+      os << "post_step_type_=" << ToString(post_step_type_) <<"\t";
       Test::PrintTestParams(os);
     }
 
@@ -490,6 +527,7 @@ class KokkosConsToPrimAH : public Test{
       os << "nvars_" <<"\t";
       os << "pre_step_type_" <<"\t";
       os << "step_type_" <<"\t";
+      os << "func_type_" <<"\t";
       os << "post_step_type_" <<"\t";
       Test::PrintTestCSVHeader(os);
     }
@@ -518,6 +556,7 @@ class KokkosConsToPrimAH : public Test{
       os << nvars_ <<"\t";
       os << ToString(pre_step_type_)<<"\t";
       os << ToString(step_type_)<<"\t";
+      os << ToString(func_type_)<<"\t";
       os << ToString(post_step_type_)<<"\t";
       Test::PrintTestCSV(os);
     }
