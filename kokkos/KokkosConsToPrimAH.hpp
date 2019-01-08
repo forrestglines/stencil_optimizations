@@ -169,7 +169,12 @@ class KokkosConsToPrimAH : public Test{
     Kokkos::View<T****, Layout,HostSpace> h_cons_,h_prim_;
     
     //Timers 
-    std::chrono::high_resolution_clock::time_point startTime_,endTime_;
+    std::chrono::high_resolution_clock::time_point cpu_start_time_,cpu_end_time_;
+#if defined(KOKKOS_ENABLE_CUDA)
+    cudaEvent_t cuda_start_time_, cuda_end_time_;
+#endif
+    //Timings from both methods
+    double cpu_elapsed_time_,cuda_elapsed_time_;
 
     //MDRange Constuctor
     KokkosConsToPrimAH(unsigned int ni, unsigned int nj, unsigned int nk, 
@@ -322,6 +327,11 @@ class KokkosConsToPrimAH : public Test{
       Kokkos::deep_copy(cons_,h_cons_);
       Kokkos::deep_copy(prim_,h_prim_);
 
+#if defined(KOKKOS_ENABLE_CUDA)
+      //Create the cuda timers
+      cudaEventCreate(&cuda_start_time_);
+      cudaEventCreate(&cuda_end_time_);
+#endif
 
       return 0;
     }
@@ -332,8 +342,13 @@ class KokkosConsToPrimAH : public Test{
       Kokkos::fence();
       std::stringstream ss;
       ss<<"KokkosConsToPrimAH dim:"<<dim<<" id:"<<id_;
-      startTime_ = std::chrono::high_resolution_clock::now();
+      cpu_start_time_ = std::chrono::high_resolution_clock::now();
       Kokkos::Profiling::pushRegion(ss.str());
+#if defined(KOKKOS_ENABLE_CUDA)
+      cudaDeviceSynchronize();
+      cudaEventRecord(cuda_start_time_);
+#endif
+
     }
 
 
@@ -397,15 +412,29 @@ class KokkosConsToPrimAH : public Test{
 
     //End timing
     virtual void EndTest(int dim){
+#if defined(KOKKOS_ENABLE_CUDA)
+      cudaEventRecord(cuda_end_time_);
+#endif
       Kokkos::fence();
       Kokkos::Profiling::popRegion();
-      endTime_ = std::chrono::high_resolution_clock::now();
+      cpu_end_time_ = std::chrono::high_resolution_clock::now();
     }
 
     //Get the seconds between the last start and end
     virtual double ElapsedTime(){
-      return std::chrono::duration_cast<std::chrono::nanoseconds>( 
-          endTime_ - startTime_ ).count()/1e9;
+      cpu_elapsed_time_ = std::chrono::duration_cast<std::chrono::nanoseconds>( 
+          cpu_end_time_ - cpu_start_time_ ).count()/1e9;
+#if defined(KOKKOS_ENABLE_CUDA)
+      cudaEventSynchronize(cuda_end_time_);
+      float milliseconds = 0;
+      cudaEventElapsedTime(&milliseconds, cuda_start_time_,cuda_end_time_);
+
+      cuda_elapsed_time_ = milliseconds/1000;
+      std::cout<<"Difference"<<cpu_elapsed_time_-cuda_elapsed_time_<<std::endl;
+      return cuda_elapsed_time_;
+#else
+      return cpu_elapsed_time_;
+#endif
     }
 
     //Release memory
