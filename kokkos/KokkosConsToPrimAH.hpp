@@ -430,7 +430,6 @@ class KokkosConsToPrimAH : public Test{
       cudaEventElapsedTime(&milliseconds, cuda_start_time_,cuda_end_time_);
 
       cuda_elapsed_time_ = milliseconds/1000;
-      std::cout<<"Difference"<<cpu_elapsed_time_-cuda_elapsed_time_<<std::endl;
       return cuda_elapsed_time_;
 #else
       return cpu_elapsed_time_;

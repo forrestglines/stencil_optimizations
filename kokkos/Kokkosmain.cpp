@@ -25,7 +25,7 @@ int main(int argc, char** argv){
   //General options
   //int dimensions[][3] = {{32,32,32},{64,64,64},{256,256,256},{512,128,128}};
   //int dimensions[][3] = {{256,256,256}};
-  int dimensions[][3] = {{64,64,64},{256,256,256},{512,128,128}};
+  int dimensions[][3] = {{64,64,64},{256,256,256},{512,256,128}};
   int ghost_zones[] = {0,2};
   int nsteps = 5;
 
